@@ -1,0 +1,8 @@
+{
+    "libz.tbd": 1,
+    "CoreLocation.framework": 2,
+    "Security.framework": 1,
+    "SystemConfiguration.framework": 2,
+    "CoreTelephony.framework": 1,
+    "AudioToolbox.framework": 2
+}
