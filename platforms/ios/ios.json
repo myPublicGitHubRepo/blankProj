@@ -59,6 +59,10 @@
                         {
                             "xml": "<feature name=\"TapticEngine\"><param name=\"ios-package\" value=\"TapticEngine\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppPreferences\"><param name=\"ios-package\" value=\"AppPreferences\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -114,6 +118,9 @@
             "PACKAGE_NAME": "com.elia.blankProj"
         },
         "cordova-plugin-taptic-engine": {
+            "PACKAGE_NAME": "com.elia.blankProj"
+        },
+        "cordova-plugin-app-preferences": {
             "PACKAGE_NAME": "com.elia.blankProj"
         }
     },
@@ -429,6 +436,14 @@
             "clobbers": [
                 "TapticEngine"
             ]
+        },
+        {
+            "id": "cordova-plugin-app-preferences.apppreferences",
+            "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+            "pluginId": "cordova-plugin-app-preferences",
+            "clobbers": [
+                "plugins.appPreferences"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -444,6 +459,7 @@
         "cordova-plugin-vibration": "2.1.4",
         "cordova-plugin-whitelist": "1.3.1",
         "cordova-sqlite-storage": "2.0.2",
-        "cordova-plugin-taptic-engine": "2.1.0"
+        "cordova-plugin-taptic-engine": "2.1.0",
+        "cordova-plugin-app-preferences": "0.99.3"
     }
 }

@@ -11,6 +11,8 @@ var olStuff = (function() {
     var watchIdCompass;
     var accuracyFeature;
     var arrowFeature;
+
+
     var ovalFeature;
 
 
@@ -224,7 +226,7 @@ var olStuff = (function() {
                     },
                     function(e) {
                         //get the tile from internet or an "network error" image
-                        if (navigator.connection.type == Connection.NONE) {
+                        if (navigator.connection.type == Connection.NONE || PreferenceModule.isOffline()) {
                             imageTile.getImage().src = cordova.file.applicationDirectory + 'www/images/offline.jpeg';
                         } else {
                             //check if it's cached/or in temp
@@ -320,23 +322,25 @@ var olStuff = (function() {
 
     function init() {
 
-        var olStyles = getOlStyles();       
+        var olStyle = getOlStyles();       
         ovalFeature  =  new  ol.Feature({
             geometry:  new  ol.geom.Point([0,  0])
         });        
-        ovalFeature.setStyle(olStyles.ovalStyle);
+        ovalFeature.setStyle(olStyle.ovalStyle);
 
               
         arrowFeature  =  new  ol.Feature({
             geometry:  new  ol.geom.Point([0,  0])
         });        
-        arrowFeature.setStyle(olStyles.arrowStyle);
+
+        arrowFeature.setStyle(olStyle.arrowStyle);
+
 
         accuracyFeature = new ol.Feature({
             geometry: new ol.geom.Circle([0, 0], 0)
         });
 
-        accuracyFeature.setStyle(olStyles.accuracyStyle);
+        accuracyFeature.setStyle(olStyle.accuracyStyle);
 
         var vectorSource = new ol.source.Vector({
             features: [accuracyFeature, arrowFeature, ovalFeature]
@@ -434,6 +438,7 @@ var olStuff = (function() {
         arrowFeature.setStyle(olStyles.arrowStyle);
         switch (gpsState) {
             case gpsStates.disabled:
+
                 gpsState = gpsStates.enabled;
                 $(element).addClass("enabled");
 
@@ -442,6 +447,7 @@ var olStuff = (function() {
                     var chX = WGStoCHx(position.coords.latitude, position.coords.longitude);
                     if (ovalFeature.getGeometry().getCoordinates() != [0, 0]) {
                         olMap.getView().animate({ center: [chY, chX] }, { resolution: 5 });
+                        PreferenceModule.updatePreferences();
                     }
                 }, _geolocationError);
                 watchId = navigator.geolocation.watchPosition(_geolocationSuccess, _geolocationError, { enableHighAccuracy: true });
@@ -501,25 +507,21 @@ var olStuff = (function() {
             }
 
             //console.log(heading.trueHeading - prevHeading);
-            var radiants = -(heading.trueHeading * (Math.PI / 180));
+            var radiants = heading.trueHeading * (Math.PI / 180);
 
             if (gpsState == gpsStates.rotating) {
                 if (Math.abs(olMap.getView().getRotation() - radiants) >= 3) {
-                    olMap.getView().setRotation(radiants);
+                    olMap.getView().setRotation(-radiants);
                 } else {
-                    olMap.getView().animate({ rotation: radiants, duration: 200, easing: ol.easing.linear, anchor: ovalFeature.getGeometry().getCoordinates() });
+                    olMap.getView().animate({ rotation: -radiants, duration: 200, easing: ol.easing.linear, anchor: ovalFeature.getGeometry().getCoordinates() });
                 }
             } else {
                 if (Math.abs(heading.trueHeading - prevHeading) > 10) {
-                    arrowFeature.getStyle().getImage().setRotation(radiants)
+                    arrowFeature.getStyle().getImage().setRotation(radiants);
                     arrowFeature.setStyle(arrowFeature.getStyle());
 
                 }
             }
-
-
-
-
             prevHeading = heading.trueHeading;
         }
 
@@ -559,9 +561,19 @@ var olStuff = (function() {
         console.log("GEOLOCATION error");
     }
 
+    function setArrowStyle(isBig) {
+        var olStyle = getOlStyles();
+        if (isBig) {
+            arrowFeature.setStyle(olStyle.bigArrowStyle);
+        } else {
+            arrowFeature.setStyle(olStyle.arrowStyle);
+        }
+    }
+
     return {
         init: init,
-        toggleGPS: toggleGPS
+        toggleGPS: toggleGPS,
+        setArrowStyle: setArrowStyle
     }
 
 }());

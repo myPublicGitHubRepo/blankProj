@@ -43,6 +43,9 @@
         },
         "cordova-plugin-taptic-engine": {
             "PACKAGE_NAME": "com.elia.blankProj"
+        },
+        "cordova-plugin-app-preferences": {
+            "PACKAGE_NAME": "com.elia.blankProj"
         }
     },
     "dependent_plugins": {

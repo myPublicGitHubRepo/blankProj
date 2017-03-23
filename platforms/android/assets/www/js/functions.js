@@ -6,51 +6,24 @@ var fileTransfer = null;
     //http://stackoverflow.com/questions/21577230/phonegap-save-image-from-url-into-device-photo-gallery
     //https://www.neontribe.co.uk/cordova-file-plugin-examples/
 
-    function theCallback() {
-        log("callback called;")
-    }
 
-    function test() {
-        var filePath = "";
-        var uri = encodeURI('http://192.168.1.34:3001');
-        var fileTransfer = new FileTransfer();
-        fileTransfer.download(
-            uri,
-            filePath,
-            function(entry) {
-                //log("download complete: " + entry.fullPath);
-                //_downloadImageSync();
-                //DatabaseModule.insertTile(x, y, z, ext);
-                console.log("ok");
-            },
-            function(error) {
-                log("download error source " + error.source);
-                log("download error target " + error.target);
-                log("upload error code" + error.code);
-                //_downloadImageSync();
-            },
-            false, { //No idea... do i need this???
-                headers: {
-                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA==",
-                    "referer": "asdasdsd",
-                    "Referer": "due"
 
-                }
-            }
-        );
-    }
 
     function onDeviceReady() {
-        //test();
-        log("Device ready");
+
+        console.log("Device ready");
+
         //StatusBar.hide();
 
-        DatabaseModule.openDB(theCallback);
+        DatabaseModule.openDB();
 
         fileTransfer = new FileTransfer();
         //globalDB = new databaseManager("tilesDB.sqlite");
-        log("Database OK");
+        console.log("Database OK");
         olStuff.init();
+
+        PreferenceModule.updatePreferences();
+
 
         document.addEventListener("online", onOnline, false);
         document.addEventListener("offline", onOffline, false);
@@ -63,14 +36,14 @@ var fileTransfer = null;
         document.getElementById("downloadBtn").addEventListener("click", createFile);
         document.getElementById("downloadBtn").disabled = false;*/
 
-        document.getElementById("drawBtn").addEventListener("click", startDraw);
+        document.getElementById("drawBtn").addEventListener("click", drawOkBtnClick);
         document.getElementById("drawBtn").disabled = false;
-
-        document.getElementById("okBtn").addEventListener("click", downloadDraw);
-        document.getElementById("okBtn").disabled = false;
 
         document.getElementById("delBtn").addEventListener("click", TileModule.deleteLayer);
         document.getElementById("delBtn").disabled = false;
+
+        document.getElementById("prefBtn").addEventListener("click", PreferenceModule.go2pref);
+        document.getElementById("prefBtn").disabled = false;
 
         document.getElementById("cancelBtn").addEventListener("click", cancelDraw);
         document.getElementById("cancelBtn").disabled = false;
@@ -103,33 +76,52 @@ var fileTransfer = null;
 
             //Do the other stuff related to first time launch
         }
-    }
 
-    function onOnline() {
-        //var topBar = document.getElementById('topBar');
-        //topBar.classList.add("online");
-        //topBar.classList.remove("offline");
-        StatusBar.backgroundColorByName("green");
-        var theArray = olMap.getLayers().getArray();
-
-
-        for (var l in theArray) {
-            console.log(theArray[l].getSource());
-
-            theArray[l].getSource().refresh();
-        }
-    }
-
-    function onOffline() {
-        //var topBar = document.getElementById('topBar');
-        //topBar.classList.remove("online");
-
-        StatusBar.backgroundColorByName("red");
+        console.log("Device ready done");
 
     }
+
+
+    function test() {
+        var filePath = "";
+        var uri = encodeURI('http://192.168.1.34:3001');
+        var fileTransfer = new FileTransfer();
+        fileTransfer.download(
+            uri,
+            filePath,
+            function(entry) {
+                //log("download complete: " + entry.fullPath);
+                //_downloadImageSync();
+                //DatabaseModule.insertTile(x, y, z, ext);
+                console.log("ok");
+            },
+            function(error) {
+                log("download error source " + error.source);
+                log("download error target " + error.target);
+                log("upload error code" + error.code);
+                //_downloadImageSync();
+            },
+            false, { //No idea... do i need this???
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA==",
+                    "referer": "asdasdsd",
+                    "Referer": "due"
+
+                }
+            }
+        );
+    }
+
+
+
+
+
+
 
     function onResume() {
         log("resume");
+        PreferenceModule.updatePreferences();
+
         TileModule.deleteTemp();
 
     }
@@ -201,12 +193,20 @@ function addInteraction(source) {
     });
 
 }
+var isDraw = false;
 
+function drawOkBtnClick() {
+    if (isDraw) {
+        downloadDraw();
 
+    } else {
+        startDraw();
+        isDraw = true;
+        document.getElementById("drawBtn").innerHTML = "Ok";
+    }
+}
 
 function startDraw() {
-    $("#drawBtn").hide();
-    $("#okBtn").show();
     $("#cancelBtn").show();
 
 
@@ -278,17 +278,14 @@ function startDraw() {
 }
 
 function downloadDraw() {
-    $("#okBtn").hide();
-    $("#cancelBtn").hide();
     if (navigator.connection.type == Connection.NONE) {
         alert("no internet connection");
 
         allFeatures = null;
         vector.getSource().clear();
         $('#myProgress').hide();
-        $("#drawBtn").show();
-
-
+        isDraw = false;
+        document.getElementById("drawBtn").innerHTML = "Draw";
         return;
     }
 
@@ -296,7 +293,7 @@ function downloadDraw() {
         //done
         vector.getSource().clear();
         $('#myProgress').hide(200);
-        $("#drawBtn").show();
+
 
         alert("done");
         return;
@@ -331,12 +328,12 @@ function downloadDraw() {
 }
 
 function cancelDraw() {
-    $("#okBtn").hide();
     $("#cancelBtn").hide();
-    $("#drawBtn").show();
     olMap.removeInteraction(draw);
     vector.getSource().clear();
     allFeatures = [];
+    isDraw = false;
+    document.getElementById("drawBtn").innerHTML = "Draw";
 
 }
 
@@ -361,4 +358,32 @@ function createFile() {
         alert("ERROR: " + error.code);
         log("ERROR: " + error.code);
     }
+}
+
+
+function onOnline() {
+    if (PreferenceModule.isOffline()) {
+        onOffline();
+        return;
+    }
+    //var topBar = document.getElementById('topBar');
+    //topBar.classList.add("online");
+    //topBar.classList.remove("offline");
+    StatusBar.backgroundColorByName("green");
+    var theArray = olMap.getLayers().getArray();
+
+
+    for (var l in theArray) {
+        console.log(theArray[l].getSource());
+
+        theArray[l].getSource().refresh();
+    }
+}
+
+function onOffline() {
+    //var topBar = document.getElementById('topBar');
+    //topBar.classList.remove("online");
+
+    StatusBar.backgroundColorByName("red");
+
 }

@@ -9,7 +9,6 @@ body {
     background: white;
     height: 100%;
     width: 100%;
-    ;
 }
 
 .olImageLoadError {
@@ -31,18 +30,6 @@ body {
 #downloadBtn {
     position: absolute;
     z-index: 100;
-}
-
-#drawBtn {
-    position: absolute;
-    z-index: 100;
-    left: 15px
-}
-
-#okBtn {
-    position: absolute;
-    z-index: 100;
-    left: 15px;
 }
 
 #delBtn {
@@ -81,7 +68,8 @@ body {
 }
 
 .topComponents {
-    top: 40px;
+    margin: 15px;
+    z-index: 100;
 }
 
 .bottomComponents {

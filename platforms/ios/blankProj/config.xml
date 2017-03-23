@@ -50,6 +50,9 @@
     <feature name="TapticEngine">
         <param name="ios-package" value="TapticEngine" />
     </feature>
+    <feature name="AppPreferences">
+        <param name="ios-package" value="AppPreferences" />
+    </feature>
     <name>blankProj</name>
     <description>
         A blank PhoneGap app.

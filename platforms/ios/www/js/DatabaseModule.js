@@ -12,7 +12,7 @@ var DatabaseModule = (function() {
     }
 
 
-    function openDB(callback) {
+    function openDB() {
         _db = window.sqlitePlugin.openDatabase({ name: "tilesDB.sqlite", location: 'default' }, _initDB, _openDbError);
 
     }

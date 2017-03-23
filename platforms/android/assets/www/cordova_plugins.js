@@ -292,6 +292,14 @@ module.exports = [
         "clobbers": [
             "TapticEngine"
         ]
+    },
+    {
+        "id": "cordova-plugin-app-preferences.apppreferences",
+        "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+        "pluginId": "cordova-plugin-app-preferences",
+        "clobbers": [
+            "plugins.appPreferences"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -309,7 +317,8 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.5",
     "cordova-plugin-http": "1.2.0",
     "cordova-plugin-vibration": "2.1.4",
-    "cordova-plugin-taptic-engine": "2.1.0"
+    "cordova-plugin-taptic-engine": "2.1.0",
+    "cordova-plugin-app-preferences": "0.99.3"
 };
 // BOTTOM OF METADATA
 });

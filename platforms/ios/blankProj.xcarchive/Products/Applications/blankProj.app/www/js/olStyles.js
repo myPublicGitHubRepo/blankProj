@@ -23,6 +23,17 @@ function getOlStyles() {
                 scale: 0.35     
             }),
         }),
+        bigArrowStyle :  new  ol.style.Style({             //geometry: new ol.geom.Circle([0, 0], 10),    
+            image:  new  ol.style.Icon({                
+                anchor:  [0.5,  1],
+                anchorXUnits:   'fraction',
+                anchorYUnits:   'fraction',
+                opacity:  1.0,
+                src:  cordova.file.applicationDirectory  +  'www/images/bigArrow.png',
+                rotateWithView: true,
+                scale: 0.35     
+            }),
+        }),
          
 
         arrowStyleRotate :  new  ol.style.Style({             //geometry: new ol.geom.Circle([0, 0], 10),    

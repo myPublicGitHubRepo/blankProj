@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0023F03AA3064B5CAF3CC37F /* TextResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A495882F5645A5AE056F65 /* TextResponseSerializer.m */; };
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
@@ -42,6 +41,8 @@
 		D0FAD416BE2A4BDE9C5B2493 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F7256B59D14BF19E66F441 /* CDVReachability.m */; };
 		D78E439A920D47F8BAF32E0D /* CDVCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = BC95DB7622F44DC6AE7EDFAC /* CDVCompass.m */; };
 		DACA1692891F42688FF49D03 /* TapticEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678FCDB63454632B700ECEE /* TapticEngine.m */; };
+		B3860D2A283B4F85900DD182 /* AppPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F97EBEB30404DB4890E93 /* AppPreferences.m */; };
+		5FA614856ECC4B1BA3D8D994 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA0F3FAFC22B40709C517B30 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,9 @@
 		F625C4ECF9A44F9D939A0AAE /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLocalFilesystem.m; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = blankProj/config.xml; sourceTree = "<group>"; };
 		F842740E22CC4275A54E5CC6 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = "cordova-plugin-http/AFHTTPSessionManager.h"; sourceTree = "<group>"; };
+		3E0F97EBEB30404DB4890E93 /* AppPreferences.m */ = {isa = PBXFileReference; name = "AppPreferences.m"; path = "cordova-plugin-app-preferences/AppPreferences.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		663419C8184547F7A9CF6054 /* AppPreferences.h */ = {isa = PBXFileReference; name = "AppPreferences.h"; path = "cordova-plugin-app-preferences/AppPreferences.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		FA0F3FAFC22B40709C517B30 /* Settings.bundle */ = {isa = PBXFileReference; name = "Settings.bundle"; path = "Settings.bundle"; sourceTree = SOURCE_ROOT; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* blankProj-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				FA0F3FAFC22B40709C517B30 /* Settings.bundle */,
 			);
 			name = Resources;
 			path = blankProj/Resources;
@@ -293,6 +298,8 @@
 				F1F8E2A040D94A09A3BF65F6 /* sqlite3.h */,
 				7678FCDB63454632B700ECEE /* TapticEngine.m */,
 				057E5A17C56F4CCFA90C618B /* TapticEngine.h */,
+				3E0F97EBEB30404DB4890E93 /* AppPreferences.m */,
+				663419C8184547F7A9CF6054 /* AppPreferences.h */,
 			);
 			name = Plugins;
 			path = blankProj/Plugins;
@@ -382,6 +389,7 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				5FA614856ECC4B1BA3D8D994 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +443,7 @@
 				A944AA7891DE43858F02C0FC /* SQLitePlugin.m in Sources */,
 				A33875D1BD5E4A93B0871882 /* sqlite3.c in Sources */,
 				DACA1692891F42688FF49D03 /* TapticEngine.m in Sources */,
+				B3860D2A283B4F85900DD182 /* AppPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,4 +49,5 @@
     <plugin name="cordova-plugin-vibration" spec="~2.1.4" />
     <engine name="ios" spec="~4.3.1" />
     <plugin name="cordova-plugin-taptic-engine" spec="~2.1.0" />
+    <plugin name="cordova-plugin-app-preferences" spec="~0.99.3" />
 </widget>
