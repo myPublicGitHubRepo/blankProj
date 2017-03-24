@@ -169,7 +169,15 @@ var TileModule = (function() {
 
 
     function deleteLayer() {
-        if (confirm('Are you sure you want to delete everything?')) {
+        navigator.notification.confirm(
+            'Are you sure you want to delete everything? ', // message
+            deleteConfirm, // callback to invoke with index of button pressed
+            'Do you really want to ', // title
+            ['Yes delete!', 'Cancel'] // buttonLabels
+        );
+
+        function deleteConfirm(buttonIndex) {
+            if (buttonIndex != 1) return;
             var type = cordova.file.dataDirectory;
             var fileName = type + '/tiles/ch.swisstopo.pixelkarte-farbe'; //ch.swisstopo.pixelkarte-farbe/'
 
@@ -187,33 +195,7 @@ var TileModule = (function() {
                 }, function() {
                     alert("dir is already empty");
                 });
-                /*
-                            dir.getDirectory('ch.swisstopo.pixelkarte-farbe', { create: false }, function(dirEntry) {
-                                dirEntry.remove(function(file) {
-                                    alert("fichier supprimer");
-                                }, function() {
-                                    alert("erreur suppression " + error.code);
-                                }, function() {
-                                    alert("fichier n'existe pas");
-                                });
-                            }, function() {
-                                console.log("error");
-                            });
-                            */
 
-
-                /*
-
-                            dir.getFile("log1.txt", { create: false }, function(fileEntry) {
-                                fileEntry.remove(function(file) {
-                                    alert("fichier supprimer");
-                                }, function() {
-                                    alert("erreur suppression " + error.code);
-                                }, function() {
-                                    alert("fichier n'existe pas");
-                                });
-                            });
-                */
 
             });
         }

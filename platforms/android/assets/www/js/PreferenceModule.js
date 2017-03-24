@@ -6,6 +6,13 @@ var PreferenceModule = (function() {
         olStuff.setArrowStyle(value);
     }
 
+    function _deleteLayerPrefOk(value) {
+        if (value) {
+            TileModule.deleteLayer();
+            plugins.appPreferences.store(function() {}, _prefFail, 'deleteLayer', false);
+        }
+    }
+
     function _newworkPrefOk(value) {
         if (network != value) {
             network = value;
@@ -29,13 +36,16 @@ var PreferenceModule = (function() {
         return network;
     }
 
+
     function updatePreferences() {
         plugins.appPreferences.fetch(_arrowPrefOk, _prefFail, 'bigArrow');
         plugins.appPreferences.fetch(_newworkPrefOk, _prefFail, 'network');
+        plugins.appPreferences.fetch(_deleteLayerPrefOk, _prefFail, 'deleteLayer');
+
     }
 
     function go2pref() {
-        plugins.appPreferences.show(function() { console.log("ok??") }, _prefFail);
+        plugins.appPreferences.show(function() {}, _prefFail);
     }
 
     return {

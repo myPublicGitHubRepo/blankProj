@@ -40,20 +40,25 @@
     <feature name="AppPreferences">
         <param name="android-package" value="me.apla.cordova.AppPreferences" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
     <name>blankProj</name>
-    <description>
-        A blank PhoneGap app.
-    </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
-    </author>
+    <description>        A blank PhoneGap app.    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">        PhoneGap Team    </author>
     <content src="index.html" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <access origin="*" />
-    <splash density="port-xhdpi" src="www/images/android/Icon-xhdpi.png" />
-    <splash density="port-xxhdpi" src="www/images/android/Icon-xxhdpi.png" />
-    <splash density="port-xxxhdpi" src="www/images/android/Icon-xxxhdpi.png" />
+    <icon density="mdpi" src="www/images/android/Icon-mdpi.png" />
+    <icon density="hdpi" src="www/images/android/Icon-hdpi.png" />
+    <icon density="xhdpi" src="www/images/android/Icon-xhdpi.png" />
+    <icon density="xxhdpi" src="www/images/android/Icon-xxhdpi.png" />
+    <icon density="xxxhdpi" src="www/images/android/Icon-xxxhdpi.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="Fullscreen" value="false" />
     <preference name="DisallowOverscroll" value="true" />
@@ -61,4 +66,7 @@
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="FadeSplashScreenDuration" value="1000" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
 </widget>

@@ -45,6 +45,12 @@
         },
         "cordova-plugin-app-preferences": {
             "PACKAGE_NAME": "com.elia.blankProj"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.elia.blankProj"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.elia.blankProj"
         }
     },
     "dependent_plugins": {

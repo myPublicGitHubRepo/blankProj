@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		7GJQDytJFPFzw4KnnyDfPp0hCiA=
+		C1Ee8v9WHn1N9ZNH/6JxZTjRzSg=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		5YhQbK/w2hrtVjbgqhOOHhzaGCI=
+		5An8IBEBmo8JPhhdji0PnEblJPE=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -102,63 +102,63 @@
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
-		SSQaBzC8MgJWeN4IXrktab76oA0=
+		30Je3XNfyJUpdPgdOI6sT0w+VM4=
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
-		SSQaBzC8MgJWeN4IXrktab76oA0=
+		30Je3XNfyJUpdPgdOI6sT0w+VM4=
 		</data>
 		<key>LaunchImage-700-Landscape@2x~ipad.png</key>
 		<data>
-		xRyEF53rPvncge6mEvNPPHMZLPI=
+		QCc0nsR2m5Hp0JTtVJZ8UJScBl0=
 		</data>
 		<key>LaunchImage-700-Landscape~ipad.png</key>
 		<data>
-		UF+hYZaxWJ4hTvpnQI0CDpVZAng=
+		P95VkUVD/HBUqnzeU3WNgNdBJZA=
 		</data>
 		<key>LaunchImage-700-Portrait@2x~ipad.png</key>
 		<data>
-		Nim0AhsbkZJKWuKHPZTZfiq67lg=
+		qoIowLFFLeuO5xxhfmW/wFJ/Jic=
 		</data>
 		<key>LaunchImage-700-Portrait~ipad.png</key>
 		<data>
-		EziB8rHFrGAAmA+auXVgT39OIl0=
+		0BNWuV8Nl2hqe5o6t8D1a1LHRMA=
 		</data>
 		<key>LaunchImage-700@2x.png</key>
 		<data>
-		qVxPqkcU+afzN+KfIxv8az4333A=
+		GLreF112Z4R3F7bMRUhmbjH78n0=
 		</data>
 		<key>LaunchImage-800-667h@2x.png</key>
 		<data>
-		KvWMTMHOVs4HE1Y5ANKMInJjb0g=
+		P4SJ+4g1YAKsgq0hi09EFDDEAW0=
 		</data>
 		<key>LaunchImage-800-Landscape-736h@3x.png</key>
 		<data>
-		0DF7oF/7u8/6oPBlr0iKVPwOTLQ=
+		csfQoD6C1C4Ww5OUZdYvIM+Sbgg=
 		</data>
 		<key>LaunchImage-800-Portrait-736h@3x.png</key>
 		<data>
-		GYTtM/NySuwN4RG2xYrkIZKJBpE=
+		wLXzNgOzdukDPyIk1N850YGdgMk=
 		</data>
 		<key>LaunchImage-Portrait@2x~ipad.png</key>
 		<data>
-		Nim0AhsbkZJKWuKHPZTZfiq67lg=
+		qoIowLFFLeuO5xxhfmW/wFJ/Jic=
 		</data>
 		<key>LaunchImage-Portrait~ipad.png</key>
 		<data>
-		EziB8rHFrGAAmA+auXVgT39OIl0=
+		0BNWuV8Nl2hqe5o6t8D1a1LHRMA=
 		</data>
 		<key>LaunchImage.png</key>
 		<data>
-		YoZtszKfAdealzoQT3ofuk1FLDw=
+		M1rAeT8Hyomx82I2RSTpW09sufc=
 		</data>
 		<key>LaunchImage@2x.png</key>
 		<data>
-		qVxPqkcU+afzN+KfIxv8az4333A=
+		GLreF112Z4R3F7bMRUhmbjH78n0=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		MgiP7w3LeZrY1Rwk0W5QnQ+GhY8=
+		m0oosnIBIgVgh9sKLGFqf0+k1+8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -187,7 +187,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		jHFeQCFDOx0x1wBXg5gXKG9M7G0=
+		tVtZflZb5IFmJIPeS3Jb5Lwcuas=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -207,7 +207,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		/rm13BV6E1mGb3+Yf3VrJsnVEjo=
+		PLbEH75qWDphCmNiIwoxlPsCIYc=
 		</data>
 		<key>www/css/index.css</key>
 		<data>
@@ -216,6 +216,14 @@
 		<key>www/css/ol.css</key>
 		<data>
 		cBSsP1lJ/AF7l4aci4HeCaTo5rg=
+		</data>
+		<key>www/images/android/Icon-hdpi.png</key>
+		<data>
+		kJkGuPrR7qFwwA5EOy1MwXRyrZk=
+		</data>
+		<key>www/images/android/Icon-mdpi.png</key>
+		<data>
+		kfZXN+3zXRixpnZ9oj6xxBEafms=
 		</data>
 		<key>www/images/android/Icon-xhdpi.png</key>
 		<data>
@@ -228,6 +236,26 @@
 		<key>www/images/android/Icon-xxxhdpi.png</key>
 		<data>
 		OIjDLWT5qiac5GcOAXSU5lmYdQg=
+		</data>
+		<key>www/images/android/splash/drawable-hdpi.png</key>
+		<data>
+		5C/ldOuAzoh35Pucs3VjTa9gxmI=
+		</data>
+		<key>www/images/android/splash/drawable-mdpi.png</key>
+		<data>
+		JVBS/NV37/2JKS36EO4n7G252Yg=
+		</data>
+		<key>www/images/android/splash/drawable-xhdpi.png</key>
+		<data>
+		HhEWo7jx3KLePIEGHVyPZNwH8oo=
+		</data>
+		<key>www/images/android/splash/drawable-xxhdpi.png</key>
+		<data>
+		QfGUvuVLL9+Ef3kRVM7x87l+IQY=
+		</data>
+		<key>www/images/android/splash/drawable-xxxhdpi.png</key>
+		<data>
+		4XC1Y7bsfKDaHx9B2wRFCP/CzDY=
 		</data>
 		<key>www/images/arrow.png</key>
 		<data>
@@ -385,6 +413,46 @@
 		<data>
 		GDwXD6CgPZVxYti6XjRdrBMYL7E=
 		</data>
+		<key>www/images/ios/splash/Default-568h@2x.png</key>
+		<data>
+		ioU25embzJsPemvFRg1LYoAN+CQ=
+		</data>
+		<key>www/images/ios/splash/Default-667h@2x.png</key>
+		<data>
+		NtxH0kBeQ27rYMcypkaB7gkkLRE=
+		</data>
+		<key>www/images/ios/splash/Default-Landscape-736h@3x.png</key>
+		<data>
+		kL9i/CTuU6KeR97sUDfqPHZgij4=
+		</data>
+		<key>www/images/ios/splash/Default-Landscape.png</key>
+		<data>
+		KSr8DbnCAUWHRcoPEqvLb4NUoyQ=
+		</data>
+		<key>www/images/ios/splash/Default-Landscape@2x.png</key>
+		<data>
+		1Zw3tkq/gEUMaSsu2lFu4OJGXso=
+		</data>
+		<key>www/images/ios/splash/Default-Portrait-736h@3x.png</key>
+		<data>
+		9/Ykmt9uo1IBXhB37wEdPvpL/gw=
+		</data>
+		<key>www/images/ios/splash/Default-Portrait.png</key>
+		<data>
+		JA7FkKrJkf2WZfR5yuJ1EX6m6t4=
+		</data>
+		<key>www/images/ios/splash/Default-Portrait@2x.png</key>
+		<data>
+		RgSHm5jXwYu0NhhQ92FPe6I/sYc=
+		</data>
+		<key>www/images/ios/splash/Default.png</key>
+		<data>
+		k4uFSE+9bF+tUY0udMLCgcesVeU=
+		</data>
+		<key>www/images/ios/splash/Default@2x.png</key>
+		<data>
+		CrsJxdiFD3SnhX3WKXAbTkRWwrY=
+		</data>
 		<key>www/images/offline.jpeg</key>
 		<data>
 		5+pTAp2j9vtWjb5Ec7qezTLyXEQ=
@@ -439,7 +507,7 @@
 		</data>
 		<key>www/js/functions.js</key>
 		<data>
-		ASVxrn8XWOvaEOzzzyNtk7dYUwA=
+		8Ex4IYG2tDkYL6+pe2b4IfX6EtA=
 		</data>
 		<key>www/js/geoAdminAPI/AA_loader-3.18.2.js</key>
 		<data>
@@ -640,6 +708,10 @@
 		<key>www/plugins/cordova-plugin-network-information/www/network.js</key>
 		<data>
 		jxeuXL/JPk6C5eQC7iVThLg7NPc=
+		</data>
+		<key>www/plugins/cordova-plugin-splashscreen/www/splashscreen.js</key>
+		<data>
+		n2E0W8B/grOxM2ORx/haAYOWIcA=
 		</data>
 		<key>www/plugins/cordova-plugin-statusbar/www/statusbar.js</key>
 		<data>
@@ -888,11 +960,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7GJQDytJFPFzw4KnnyDfPp0hCiA=
+			C1Ee8v9WHn1N9ZNH/6JxZTjRzSg=
 			</data>
 			<key>hash2</key>
 			<data>
-			PUlVs3hi9AYlYvQShFlgR21RFFlb1NKq1puvLsoWaj8=
+			t0s7fsEg/1C7QK6iXJjSXPpaBBgTvdQRcT9NpiAu7Bo=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -910,176 +982,176 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5YhQbK/w2hrtVjbgqhOOHhzaGCI=
+			5An8IBEBmo8JPhhdji0PnEblJPE=
 			</data>
 			<key>hash2</key>
 			<data>
-			dZKXD0Q/++ri2tGaDgragKsUPONhPSBJfX6Zqx5Aqqs=
+			xB0QrdwWiRUOJxAnL0vaOF9VlHdXinR8LnAq2TfTk0U=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SSQaBzC8MgJWeN4IXrktab76oA0=
+			30Je3XNfyJUpdPgdOI6sT0w+VM4=
 			</data>
 			<key>hash2</key>
 			<data>
-			6Sr8Jt/Y3s+nfYBOHJdDIMtmTtSl/YJmjSwV7Cg6XYc=
+			9c2wuIe8ft7TdGXdQw26aKFyPOkU2pJ4GQKS/sfDbp0=
 			</data>
 		</dict>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SSQaBzC8MgJWeN4IXrktab76oA0=
+			30Je3XNfyJUpdPgdOI6sT0w+VM4=
 			</data>
 			<key>hash2</key>
 			<data>
-			6Sr8Jt/Y3s+nfYBOHJdDIMtmTtSl/YJmjSwV7Cg6XYc=
+			9c2wuIe8ft7TdGXdQw26aKFyPOkU2pJ4GQKS/sfDbp0=
 			</data>
 		</dict>
 		<key>LaunchImage-700-Landscape@2x~ipad.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xRyEF53rPvncge6mEvNPPHMZLPI=
+			QCc0nsR2m5Hp0JTtVJZ8UJScBl0=
 			</data>
 			<key>hash2</key>
 			<data>
-			sjUlHkO2f5gV/Y0XGVomoVoTyqCM7jvtZV7JIBm3SBs=
+			c6nAXL65waPCgeEWmfHhuTjDPhB+fLMooWhkAQE1H0g=
 			</data>
 		</dict>
 		<key>LaunchImage-700-Landscape~ipad.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UF+hYZaxWJ4hTvpnQI0CDpVZAng=
+			P95VkUVD/HBUqnzeU3WNgNdBJZA=
 			</data>
 			<key>hash2</key>
 			<data>
-			0uL9xYUzUXpqEBF3yHHkHSwjjs/+5W6WoEf/AMqwgEE=
+			9r+V3EJwxc3/fEm5RluL9hx9a0ubvXce9DECQnS0CLA=
 			</data>
 		</dict>
 		<key>LaunchImage-700-Portrait@2x~ipad.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Nim0AhsbkZJKWuKHPZTZfiq67lg=
+			qoIowLFFLeuO5xxhfmW/wFJ/Jic=
 			</data>
 			<key>hash2</key>
 			<data>
-			BVGcD/hoBZ4eHcMinfBIu2IEtvkorxvJB0OIhsOKQdc=
+			Vn8o6IEPTHrRkg7T0KF3NDZ9oFK8Mclh/y0UU4UZVkk=
 			</data>
 		</dict>
 		<key>LaunchImage-700-Portrait~ipad.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EziB8rHFrGAAmA+auXVgT39OIl0=
+			0BNWuV8Nl2hqe5o6t8D1a1LHRMA=
 			</data>
 			<key>hash2</key>
 			<data>
-			2sB8TdduUroNPFpqOeW7gVXT2qN021HPUnAPwobhtNQ=
+			OuJkEDdkBrmQvVJ421wCXtIDJPwHwjexEHhYLES3ic8=
 			</data>
 		</dict>
 		<key>LaunchImage-700@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qVxPqkcU+afzN+KfIxv8az4333A=
+			GLreF112Z4R3F7bMRUhmbjH78n0=
 			</data>
 			<key>hash2</key>
 			<data>
-			yb8AiROFpHIyjWxey5In20gAVMui6Bk7ZAU4GqSYjkw=
+			19m2i6sK3MIJuy6x8yu0af2XMU9qvGiL2zKeZsUGd0c=
 			</data>
 		</dict>
 		<key>LaunchImage-800-667h@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KvWMTMHOVs4HE1Y5ANKMInJjb0g=
+			P4SJ+4g1YAKsgq0hi09EFDDEAW0=
 			</data>
 			<key>hash2</key>
 			<data>
-			w/e6FQ1tewAjg/u9l6VI5fQfvCkyXYZPerlELKAvPmo=
+			DxZxaI9RkofDrkPDu8cGjFa4IPF45hW8Hz9JpfnHGGI=
 			</data>
 		</dict>
 		<key>LaunchImage-800-Landscape-736h@3x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0DF7oF/7u8/6oPBlr0iKVPwOTLQ=
+			csfQoD6C1C4Ww5OUZdYvIM+Sbgg=
 			</data>
 			<key>hash2</key>
 			<data>
-			DO5RzCTwPjxMHiXXXLiirdwNmLeIoyJ9JxWEaRDA5NA=
+			TL9j120YT/pGh2yCGepm+84/JHgsRXSV6UdtuAWZCTw=
 			</data>
 		</dict>
 		<key>LaunchImage-800-Portrait-736h@3x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GYTtM/NySuwN4RG2xYrkIZKJBpE=
+			wLXzNgOzdukDPyIk1N850YGdgMk=
 			</data>
 			<key>hash2</key>
 			<data>
-			C/zTY5pQ2JvhG3YSY+cfWiLeQjXr8PZspYGB5zOP6iU=
+			e7cW0Bo0QGJ4sZvfI4qVNEL4esWI775tOkyJ3dFhw5o=
 			</data>
 		</dict>
 		<key>LaunchImage-Portrait@2x~ipad.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Nim0AhsbkZJKWuKHPZTZfiq67lg=
+			qoIowLFFLeuO5xxhfmW/wFJ/Jic=
 			</data>
 			<key>hash2</key>
 			<data>
-			BVGcD/hoBZ4eHcMinfBIu2IEtvkorxvJB0OIhsOKQdc=
+			Vn8o6IEPTHrRkg7T0KF3NDZ9oFK8Mclh/y0UU4UZVkk=
 			</data>
 		</dict>
 		<key>LaunchImage-Portrait~ipad.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EziB8rHFrGAAmA+auXVgT39OIl0=
+			0BNWuV8Nl2hqe5o6t8D1a1LHRMA=
 			</data>
 			<key>hash2</key>
 			<data>
-			2sB8TdduUroNPFpqOeW7gVXT2qN021HPUnAPwobhtNQ=
+			OuJkEDdkBrmQvVJ421wCXtIDJPwHwjexEHhYLES3ic8=
 			</data>
 		</dict>
 		<key>LaunchImage.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YoZtszKfAdealzoQT3ofuk1FLDw=
+			M1rAeT8Hyomx82I2RSTpW09sufc=
 			</data>
 			<key>hash2</key>
 			<data>
-			+uHg9nDkzhowYVDkfRWp+727JZ0on9puKCSdbMn/F3s=
+			A1lO1pMWXcw85iTTqP/3tIhqTv0tn42hSTasiJSJz2g=
 			</data>
 		</dict>
 		<key>LaunchImage@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qVxPqkcU+afzN+KfIxv8az4333A=
+			GLreF112Z4R3F7bMRUhmbjH78n0=
 			</data>
 			<key>hash2</key>
 			<data>
-			yb8AiROFpHIyjWxey5In20gAVMui6Bk7ZAU4GqSYjkw=
+			19m2i6sK3MIJuy6x8yu0af2XMU9qvGiL2zKeZsUGd0c=
 			</data>
 		</dict>
 		<key>MainViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MgiP7w3LeZrY1Rwk0W5QnQ+GhY8=
+			m0oosnIBIgVgh9sKLGFqf0+k1+8=
 			</data>
 			<key>hash2</key>
 			<data>
-			bU6eNHtZIbJhZOrLn3+ldOYCV9FvO2h8/LGo+XNO5zk=
+			AmqY8cGJ1meEYhbuEVv9FmrX82JZNoai3S9B7L3M+eY=
 			</data>
 		</dict>
 		<key>Settings.bundle/.me.apla.apppreferences</key>
@@ -1132,11 +1204,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jHFeQCFDOx0x1wBXg5gXKG9M7G0=
+			tVtZflZb5IFmJIPeS3Jb5Lwcuas=
 			</data>
 			<key>hash2</key>
 			<data>
-			LC1aw48AOBelMvTAq7iDaecRz45jJ5gknAVbPQJDpdo=
+			ZWjMm8k9ePputpm0ksPMf74FjBKCGxpxnD7g1JLYBUM=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -1187,11 +1259,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/rm13BV6E1mGb3+Yf3VrJsnVEjo=
+			PLbEH75qWDphCmNiIwoxlPsCIYc=
 			</data>
 			<key>hash2</key>
 			<data>
-			TA7TbmgcAMmv/9GkMIUFjHFVUB72Gu2EKd/UNWngKbY=
+			z7cdF7LZiKjDi1kuXUlv7ygtigsoNvgoZY4foUygeM4=
 			</data>
 		</dict>
 		<key>www/css/index.css</key>
@@ -1214,6 +1286,28 @@
 			<key>hash2</key>
 			<data>
 			rpFY4mIvmgB/x1eMAQLZFe88j3QbQKUucQ8D5Z0GSWE=
+			</data>
+		</dict>
+		<key>www/images/android/Icon-hdpi.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kJkGuPrR7qFwwA5EOy1MwXRyrZk=
+			</data>
+			<key>hash2</key>
+			<data>
+			iNHOjmSdFrdnmQ3AhGUmJkiJs750Y/7lmttNm/NLfQs=
+			</data>
+		</dict>
+		<key>www/images/android/Icon-mdpi.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kfZXN+3zXRixpnZ9oj6xxBEafms=
+			</data>
+			<key>hash2</key>
+			<data>
+			LlIIu7dPswxNXG90wAYalXssCDE3/WZ/hDU3ZG9p3cA=
 			</data>
 		</dict>
 		<key>www/images/android/Icon-xhdpi.png</key>
@@ -1247,6 +1341,61 @@
 			<key>hash2</key>
 			<data>
 			oLGZe5OtyWtCZ2k+u9yNGACIOSY9rfWENJtTtAGeqSo=
+			</data>
+		</dict>
+		<key>www/images/android/splash/drawable-hdpi.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5C/ldOuAzoh35Pucs3VjTa9gxmI=
+			</data>
+			<key>hash2</key>
+			<data>
+			QanVRPDiyNiAC/EX/dtuSzN+MI537MMgit8ReK1qv8w=
+			</data>
+		</dict>
+		<key>www/images/android/splash/drawable-mdpi.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JVBS/NV37/2JKS36EO4n7G252Yg=
+			</data>
+			<key>hash2</key>
+			<data>
+			HAHpnvMKupgGVyF5X7ln9H4qnVXACAQ7XOdi7kJP/ho=
+			</data>
+		</dict>
+		<key>www/images/android/splash/drawable-xhdpi.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HhEWo7jx3KLePIEGHVyPZNwH8oo=
+			</data>
+			<key>hash2</key>
+			<data>
+			1M3/f/IpEmCPCadTNilnYzifnjTkjr5fKCbnBJTXpDQ=
+			</data>
+		</dict>
+		<key>www/images/android/splash/drawable-xxhdpi.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QfGUvuVLL9+Ef3kRVM7x87l+IQY=
+			</data>
+			<key>hash2</key>
+			<data>
+			m+WfAKXwVipkbzbqG1QvpqkpAgGJ4VSJNNADobD0hO4=
+			</data>
+		</dict>
+		<key>www/images/android/splash/drawable-xxxhdpi.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4XC1Y7bsfKDaHx9B2wRFCP/CzDY=
+			</data>
+			<key>hash2</key>
+			<data>
+			Nb+fjS33NGgafpKX9a9a4UZO8bI/ZfvjN/Z8ARVAh3M=
 			</data>
 		</dict>
 		<key>www/images/arrow.png</key>
@@ -1678,6 +1827,116 @@
 			mWaWC1qUO80LoNXuzWcN+yjeW774zVz+XvOzRhYHhjQ=
 			</data>
 		</dict>
+		<key>www/images/ios/splash/Default-568h@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ioU25embzJsPemvFRg1LYoAN+CQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			V+wzzkytexH9dFZxY4FhIqJaTYcXmJikaeFYKjolmGA=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default-667h@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NtxH0kBeQ27rYMcypkaB7gkkLRE=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ied523439cU6ldPH1LoJ+8itRlCPXR5cskBm/2NcjRI=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default-Landscape-736h@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kL9i/CTuU6KeR97sUDfqPHZgij4=
+			</data>
+			<key>hash2</key>
+			<data>
+			/tkVETqcOydLaKmx583vPOvRj+X1WGe1gLuuE3M1LMo=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default-Landscape.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KSr8DbnCAUWHRcoPEqvLb4NUoyQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			C46Fr7eKpv9cf2GHoMXxZ7UaFPFiWjVpdXmMDQMzAs0=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default-Landscape@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1Zw3tkq/gEUMaSsu2lFu4OJGXso=
+			</data>
+			<key>hash2</key>
+			<data>
+			HCoqEwI6sz7RoLrMogmHm4O+SRrBfOhtiAmxEY/BBBk=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default-Portrait-736h@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9/Ykmt9uo1IBXhB37wEdPvpL/gw=
+			</data>
+			<key>hash2</key>
+			<data>
+			5Yx5gP07SkQRWOygpKfcXxA866MCXEcbNGLAfayj0cM=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default-Portrait.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JA7FkKrJkf2WZfR5yuJ1EX6m6t4=
+			</data>
+			<key>hash2</key>
+			<data>
+			Z19hhwfb5lqMVwMV3B8kM+p+I/33jCs4gxzPcm38VRc=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default-Portrait@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RgSHm5jXwYu0NhhQ92FPe6I/sYc=
+			</data>
+			<key>hash2</key>
+			<data>
+			4sZw3pfUuPSL9SMaJKrjmH9e61qZ/c1hy+EV18hwVHw=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k4uFSE+9bF+tUY0udMLCgcesVeU=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ml23nwl+zPRbKOVSLzQy5Ad8lGe3mobu5WoOBnDdCjc=
+			</data>
+		</dict>
+		<key>www/images/ios/splash/Default@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CrsJxdiFD3SnhX3WKXAbTkRWwrY=
+			</data>
+			<key>hash2</key>
+			<data>
+			tMoXHd9qlOruoNJgSb5QKbIJe2RZFFJ6ARqK0xUKoG4=
+			</data>
+		</dict>
 		<key>www/images/offline.jpeg</key>
 		<dict>
 			<key>hash</key>
@@ -1825,11 +2084,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ASVxrn8XWOvaEOzzzyNtk7dYUwA=
+			8Ex4IYG2tDkYL6+pe2b4IfX6EtA=
 			</data>
 			<key>hash2</key>
 			<data>
-			nfh5S5h0pFKoxHPlT9dHyRS1rLle1isKh0vfiM/zIS0=
+			iDvUBOHmdRl4U9Np/sfvumpjznvLxDG2DAaCUvJ1h34=
 			</data>
 		</dict>
 		<key>www/js/geoAdminAPI/AA_loader-3.18.2.js</key>
@@ -2380,6 +2639,17 @@
 			<key>hash2</key>
 			<data>
 			6BrhkQ/LskQvmM1rbhciH8KThNK7PeYwvje9PZsZIro=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-splashscreen/www/splashscreen.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n2E0W8B/grOxM2ORx/haAYOWIcA=
+			</data>
+			<key>hash2</key>
+			<data>
+			YSn19P0zRIG9MxdesT37iqYB1WqXVOFIXyjmnTn6foU=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-statusbar/www/statusbar.js</key>

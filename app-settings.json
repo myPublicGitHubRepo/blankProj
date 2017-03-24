@@ -32,7 +32,14 @@
         "type": "toggle",
         "default": false,
         "key": "network"
+    }, {
+        "title": "Delete all layers",
+        "type": "toggle",
+        "default": false,
+        "key": "deleteLayer"
     }]
+
+
 
 
 

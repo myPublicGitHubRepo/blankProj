@@ -68,6 +68,16 @@
         <key>DefaultValue</key>
         <false/>
       </dict>
+      <dict>
+        <key>Type</key>
+        <string>PSToggleSwitchSpecifier</string>
+        <key>Key</key>
+        <string>deleteLayer</string>
+        <key>Title</key>
+        <string>Delete all layers</string>
+        <key>DefaultValue</key>
+        <false/>
+      </dict>
     </array>
   </dict>
 </plist>

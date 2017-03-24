@@ -39,11 +39,8 @@ var fileTransfer = null;
         document.getElementById("drawBtn").addEventListener("click", drawOkBtnClick);
         document.getElementById("drawBtn").disabled = false;
 
-        document.getElementById("delBtn").addEventListener("click", TileModule.deleteLayer);
-        document.getElementById("delBtn").disabled = false;
 
         document.getElementById("prefBtn").addEventListener("click", PreferenceModule.go2pref);
-        document.getElementById("prefBtn").disabled = false;
 
         document.getElementById("cancelBtn").addEventListener("click", cancelDraw);
         document.getElementById("cancelBtn").disabled = false;
@@ -78,44 +75,20 @@ var fileTransfer = null;
         }
 
         console.log("Device ready done");
+        navigator.splashscreen.hide();
 
-    }
+        //alert(MenuModule.publicVariable());
+        //MenuModule.publicVariable(100);
+        //alert(MenuModule.publicVariable());
+        //MenuModule.bla();
+        //alert(MenuModule.publicVariable());
 
-
-    function test() {
-        var filePath = "";
-        var uri = encodeURI('http://192.168.1.34:3001');
-        var fileTransfer = new FileTransfer();
-        fileTransfer.download(
-            uri,
-            filePath,
-            function(entry) {
-                //log("download complete: " + entry.fullPath);
-                //_downloadImageSync();
-                //DatabaseModule.insertTile(x, y, z, ext);
-                console.log("ok");
-            },
-            function(error) {
-                log("download error source " + error.source);
-                log("download error target " + error.target);
-                log("upload error code" + error.code);
-                //_downloadImageSync();
-            },
-            false, { //No idea... do i need this???
-                headers: {
-                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA==",
-                    "referer": "asdasdsd",
-                    "Referer": "due"
-
-                }
-            }
-        );
-    }
 
 
 
 
 
+    }
 
 
     function onResume() {
@@ -369,9 +342,8 @@ function onOnline() {
     //var topBar = document.getElementById('topBar');
     //topBar.classList.add("online");
     //topBar.classList.remove("offline");
-    StatusBar.backgroundColorByName("green");
+    StatusBar.backgroundColorByHexString("#228B22");
     var theArray = olMap.getLayers().getArray();
-
 
     for (var l in theArray) {
         console.log(theArray[l].getSource());
@@ -383,7 +355,5 @@ function onOnline() {
 function onOffline() {
     //var topBar = document.getElementById('topBar');
     //topBar.classList.remove("online");
-
-    StatusBar.backgroundColorByName("red");
-
+    StatusBar.backgroundColorByHexString("#8B0000");
 }

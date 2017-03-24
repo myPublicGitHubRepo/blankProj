@@ -78,6 +78,9 @@ var fileTransfer = null;
         }
 
         console.log("Device ready done");
+        navigator.splashscreen.hide();
+
+
 
     }
 
@@ -369,7 +372,7 @@ function onOnline() {
     //var topBar = document.getElementById('topBar');
     //topBar.classList.add("online");
     //topBar.classList.remove("offline");
-    StatusBar.backgroundColorByName("green");
+    StatusBar.backgroundColorByHexString("#228B22");
     var theArray = olMap.getLayers().getArray();
 
 
@@ -384,6 +387,6 @@ function onOffline() {
     //var topBar = document.getElementById('topBar');
     //topBar.classList.remove("online");
 
-    StatusBar.backgroundColorByName("red");
+    StatusBar.backgroundColorByHexString("#8B0000")
 
 }

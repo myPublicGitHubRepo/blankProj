@@ -16,50 +16,33 @@ body {
     background: gray;
 }
 
-#textarea {
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 100;
-    opacity: 0.8;
-    box-sizing: border-box;
-}
-
 #downloadBtn {
     position: absolute;
-    z-index: 100;
+    z-index: 5;
 }
 
 #delBtn {
     position: absolute;
-    z-index: 100;
+    z-index: 5;
     left: 15px;
 }
 
 #cancelBtn {
     position: absolute;
-    z-index: 100;
+    z-index: 4;
     left: 15px;
-}
-
-#gpsCB {
-    position: absolute;
-    z-index: 100;
-    right: 20px;
 }
 
 #myProgress {
     position: absolute;
     width: 100%;
     background-color: #ddd;
-    z-index: 99;
+    z-index: 4;
     margin-top: 45px;
 }
 
 #myBar {
-    width: 00%;
+    width: 0%;
     height: 30px;
     background-color: #4CAF50;
     text-align: center;
@@ -69,7 +52,26 @@ body {
 
 .topComponents {
     margin: 15px;
-    z-index: 100;
+    z-index: 5;
+}
+
+.topBar {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.menuButton {
+    font-size: 30px;
+    cursor: pointer;
+    right: 15px;
+    float: right;
+    color: white;
+}
+
+.menuButton:focus {
+    outline: none;
 }
 
 .bottomComponents {
@@ -78,7 +80,7 @@ body {
 
 .geolocationBtn {
     position: absolute;
-    z-index: 100;
+    z-index: 5;
     right: 15px;
     height: 40px;
     width: 40px;
@@ -130,6 +132,8 @@ body {
     min-width: 100px;
 }
 
+
+/**
 .btn:hover,
 .btn:focus,
 .btn:active,
@@ -138,3 +142,4 @@ body {
     background-color: #3276b1;
     border-color: #285e8e;
 }
+*/

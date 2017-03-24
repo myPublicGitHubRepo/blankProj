@@ -300,6 +300,30 @@ module.exports = [
         "clobbers": [
             "plugins.appPreferences"
         ]
+    },
+    {
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "pluginId": "cordova-plugin-splashscreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
+    },
+    {
+        "id": "cordova-plugin-dialogs.notification",
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "pluginId": "cordova-plugin-dialogs",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "id": "cordova-plugin-dialogs.notification_android",
+        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+        "pluginId": "cordova-plugin-dialogs",
+        "merges": [
+            "navigator.notification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -318,7 +342,9 @@ module.exports.metadata =
     "cordova-plugin-http": "1.2.0",
     "cordova-plugin-vibration": "2.1.4",
     "cordova-plugin-taptic-engine": "2.1.0",
-    "cordova-plugin-app-preferences": "0.99.3"
+    "cordova-plugin-app-preferences": "0.99.3",
+    "cordova-plugin-splashscreen": "4.0.2",
+    "cordova-plugin-dialogs": "1.3.2"
 };
 // BOTTOM OF METADATA
 });

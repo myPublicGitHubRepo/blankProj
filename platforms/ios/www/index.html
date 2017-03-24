@@ -16,6 +16,7 @@
 
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">-->
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/ol.css">
@@ -52,20 +53,32 @@
     <script src="js/TileModule.js" type="text/javascript"></script>
     <script src="js/TransferModule.js" type="text/javascript"></script>
     <script src="js/mathFunctions.js" type="text/javascript"></script>
+    <script src="js/MenuModule.js" type="text/javascript"></script>
 
 
-    <script type="text/javascript" src="cordova.js"></script>
+
+
     <title>Blank App</title>
 </head>
 
 <body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="MenuModule.closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a id="prefBtn" href="#">Preferences</a>
+    </div>
+
     <!-- https://www.tutorialspoint.com/cordova/cordova_file_system.htm -->
     <!--<button id="downloadBtn" disabled class="topComponents">Download</button>-->
-    <div style="position: absolute; z-index: 100;">
+    <div class="topBar">
         <button id="drawBtn" disabled class="topComponents btn">Draw</button>
-        <button id="prefBtn" disabled class="topComponents btn">Settings</button>
+        <span class="topComponents menuButton" onclick="MenuModule.openNav()">&#9776;</span>
+
     </div>
-    <button id="delBtn" disabled class="bottomComponents btn">Delete</button>
+
     <button id="cancelBtn" disabled class="bottomComponents btn" hidden>Cancel</button>
 
     <!--<input type="checkbox" id="gpsCB" value="GPS" onclick="olStuff.toggleGPS('gpsCB');" class="topComponents">-->
@@ -80,24 +93,10 @@
     </div>
     <!--<div id="gpsCB"></div>-->
 
-
-
     <div id="map" class="map"></div>
 
+    <script type="text/javascript" src="cordova.js"></script>
 
-
-    <script type="text/javascript">
-        //  app.initialize();
-        /*
-        (function() {
-            if (navigator.connection.type != Connection.NONE) {
-                onOnline();
-            } else {
-                onOffline();
-            }
-        });
-        */
-    </script>
 </body>
 
 </html>

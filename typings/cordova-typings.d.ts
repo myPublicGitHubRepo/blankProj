@@ -7,3 +7,5 @@
 /// <reference path="../.vscode/typings/cordova/plugins/DeviceOrientation.d.ts"/>
 /// <reference path="../.vscode/typings/cordova/plugins/Device.d.ts"/>
 /// <reference path="../.vscode/typings/cordova/plugins/Vibration.d.ts"/>
+/// <reference path="../.vscode/typings/cordova/plugins/Splashscreen.d.ts"/>
+/// <reference path="../.vscode/typings/cordova/plugins/Dialogs.d.ts"/>
