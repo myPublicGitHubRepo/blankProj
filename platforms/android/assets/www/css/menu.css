@@ -1,5 +1,14 @@
-.sidenav {
+.sidenavBackground {
     height: 100%;
+    width: 0;
+    z-index: 9;
+    position: absolute;
+}
+
+.sidenav {
+    margin-top: 56px;
+    bottom: 0;
+    height: auto;
     width: 0;
     position: absolute;
     z-index: 10;
@@ -7,9 +16,9 @@
     right: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    transition: 0.3s;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .sidenav a {
@@ -18,7 +27,7 @@
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
 }
 
 .sidenav a:hover,

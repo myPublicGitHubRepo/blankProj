@@ -54,6 +54,11 @@
     <script src="js/TransferModule.js" type="text/javascript"></script>
     <script src="js/mathFunctions.js" type="text/javascript"></script>
     <script src="js/MenuModule.js" type="text/javascript"></script>
+    <script src="js/ProgressModule.js" type="text/javascript"></script>
+    <script src="js/LayerModule.js" type="text/javascript"></script>
+
+
+
 
 
 
@@ -62,20 +67,26 @@
 </head>
 
 <body>
-
+    <div id="mySidenavBackground" class="sidenavBackground"></div>
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="MenuModule.closeNav()">&times;</a>
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="MenuModule.closeNav()">&times;</a>-->
         <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a id="prefBtn" href="#">Preferences</a>
+        <a id="pixelFarbeMenu" href="#">Pixel Farbe</a>
+        <a id="swissimageMenu" href="#">Swissimage</a>
+        <a id="prefMenu" href="#">Preferences</a>
+        <a id="drawMenu" href="#">Draw</a>
     </div>
+
 
     <!-- https://www.tutorialspoint.com/cordova/cordova_file_system.htm -->
     <!--<button id="downloadBtn" disabled class="topComponents">Download</button>-->
-    <div class="topBar">
-        <button id="drawBtn" disabled class="topComponents btn">Draw</button>
-        <span class="topComponents menuButton" onclick="MenuModule.openNav()">&#9776;</span>
+    <div id="topBar">
+        <div id="topBarTitle">Swiss Map</div>
+        <div id="menuContainer" class="topComponents" onclick="MenuModule.openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
 
     </div>
 
@@ -94,7 +105,7 @@
     <!--<div id="gpsCB"></div>-->
 
     <div id="map" class="map"></div>
-
+    <div id="progress"></div>
     <script type="text/javascript" src="cordova.js"></script>
 
 </body>

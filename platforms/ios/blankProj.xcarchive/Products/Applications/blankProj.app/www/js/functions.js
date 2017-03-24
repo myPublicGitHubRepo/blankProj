@@ -39,11 +39,6 @@ var fileTransfer = null;
         document.getElementById("drawBtn").addEventListener("click", drawOkBtnClick);
         document.getElementById("drawBtn").disabled = false;
 
-        document.getElementById("delBtn").addEventListener("click", TileModule.deleteLayer);
-        document.getElementById("delBtn").disabled = false;
-
-        document.getElementById("prefBtn").addEventListener("click", PreferenceModule.go2pref);
-        document.getElementById("prefBtn").disabled = false;
 
         document.getElementById("cancelBtn").addEventListener("click", cancelDraw);
         document.getElementById("cancelBtn").disabled = false;
@@ -76,49 +71,22 @@ var fileTransfer = null;
 
             //Do the other stuff related to first time launch
         }
-
+        MenuModule.init();
         console.log("Device ready done");
         navigator.splashscreen.hide();
 
+        //alert(MenuModule.publicVariable());
+        //MenuModule.publicVariable(100);
+        //alert(MenuModule.publicVariable());
+        //MenuModule.bla();
+        //alert(MenuModule.publicVariable());
+
+
+
+
 
 
     }
-
-
-    function test() {
-        var filePath = "";
-        var uri = encodeURI('http://192.168.1.34:3001');
-        var fileTransfer = new FileTransfer();
-        fileTransfer.download(
-            uri,
-            filePath,
-            function(entry) {
-                //log("download complete: " + entry.fullPath);
-                //_downloadImageSync();
-                //DatabaseModule.insertTile(x, y, z, ext);
-                console.log("ok");
-            },
-            function(error) {
-                log("download error source " + error.source);
-                log("download error target " + error.target);
-                log("upload error code" + error.code);
-                //_downloadImageSync();
-            },
-            false, { //No idea... do i need this???
-                headers: {
-                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA==",
-                    "referer": "asdasdsd",
-                    "Referer": "due"
-
-                }
-            }
-        );
-    }
-
-
-
-
-
 
 
     function onResume() {
@@ -220,12 +188,21 @@ function startDraw() {
     }
 
     if (draw != null) { olMap.removeInteraction(draw); }
-    var theStyle = new ol.style.Style({
-        //I don't know how to get the color of your kml to fill each room
-        stroke: new ol.style.Stroke({ color: '#0000FF', width: 3 }),
+    var theStyle = [
+        new ol.style.Style({
+            //I don't know how to get the color of your kml to fill each room
+            stroke: new ol.style.Stroke({ color: '#FFFFFF', width: 6 })
 
-        //fill: red
-    });
+            //fill: red
+        }),
+        new ol.style.Style({
+            //I don't know how to get the color of your kml to fill each room
+            stroke: new ol.style.Stroke({ color: '#309bd1', width: 3 }),
+
+            //fill: red
+        })
+
+    ];
 
     var source = new ol.source.Vector({
         // features: [circleFeature]
@@ -284,49 +261,39 @@ function downloadDraw() {
     if (navigator.connection.type == Connection.NONE) {
         alert("no internet connection");
 
-        allFeatures = null;
-        vector.getSource().clear();
+
         $('#myProgress').hide();
-        isDraw = false;
-        document.getElementById("drawBtn").innerHTML = "Draw";
+        cancelDraw();
         return;
     }
 
     if (allFeatures.length == 0) {
         //done
-        vector.getSource().clear();
-        $('#myProgress').hide(200);
 
+        $('#myProgress').hide(200);
+        cancelDraw();
 
         alert("done");
         return;
     }
-    var theStyle = new ol.style.Style({
-        //I don't know how to get the color of your kml to fill each room
-        stroke: new ol.style.Stroke({ color: '#ff0000', width: 4 })
+    var theStyle = [
+        new ol.style.Style({
 
-        //fill: red
-    });
+            stroke: new ol.style.Stroke({ color: '#FFFFFF', width: 6 })
+        }),
+        new ol.style.Style({
+            stroke: new ol.style.Stroke({ color: '#4CAF50', width: 4 })
+        })
 
+    ];
+
+    //will called recurively till allFeatures is empty
     olMap.removeInteraction(draw);
     $('#myProgress').show(200);
     var f = allFeatures.pop();
-
     f.setStyle(theStyle);
     var c = f.getGeometry().getExtent();
     TileModule.getTilesInBox(c[0], c[1], c[2], c[3]);
-
-
-    /*
-    var c = circleFeature.getGeometry().getExtent();
-
-    olMap.removeInteraction(select);
-    olMap.removeInteraction(modify);
-    olMap.removeLayer(vector);
-
-    //console.log(circleFeature.getGeometry().flatCoordinates);
-    TileModule.getTilesInBox(c[0], c[1], c[2], c[3]);    */
-
 
 }
 
@@ -337,30 +304,6 @@ function cancelDraw() {
     allFeatures = [];
     isDraw = false;
     document.getElementById("drawBtn").innerHTML = "Draw";
-
-}
-
-function createFile() {
-    //alert("hello");
-    //alert(cordova.file.externalDataDirectory);Ok
-    var networkState = navigator.connection.type;
-    if (networkState == Connection.NONE) {
-        log("no network");
-    } else {
-        log("network OK");
-        //download(URL, Folder_Name, File_Name); //If available download function call
-        //var type = cordova.file.externalDataDirectory;
-        //window.resolveLocalFileSystemURL(type, successCallback, errorCallback);
-        // alert(olMap.getView().getCenter()[0] + " " + olMap.getView().getCenter()[1]);
-        TileModule.getTilesInSquare(olMap.getView().getCenter()[0], olMap.getView().getCenter()[1], 5000);
-    }
-
-
-
-    function errorCallback(error) {
-        alert("ERROR: " + error.code);
-        log("ERROR: " + error.code);
-    }
 }
 
 
@@ -375,7 +318,6 @@ function onOnline() {
     StatusBar.backgroundColorByHexString("#228B22");
     var theArray = olMap.getLayers().getArray();
 
-
     for (var l in theArray) {
         console.log(theArray[l].getSource());
 
@@ -386,7 +328,5 @@ function onOnline() {
 function onOffline() {
     //var topBar = document.getElementById('topBar');
     //topBar.classList.remove("online");
-
-    StatusBar.backgroundColorByHexString("#8B0000")
-
+    StatusBar.backgroundColorByHexString("#8B0000");
 }

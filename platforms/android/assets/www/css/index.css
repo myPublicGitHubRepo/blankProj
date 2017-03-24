@@ -38,7 +38,7 @@ body {
     width: 100%;
     background-color: #ddd;
     z-index: 4;
-    margin-top: 45px;
+    margin-top: 70px;
 }
 
 #myBar {
@@ -51,26 +51,26 @@ body {
 }
 
 .topComponents {
-    margin: 15px;
+    margin: 10px;
     z-index: 5;
 }
 
-.topBar {
+#topBar {
     position: absolute;
     z-index: 5;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: #111;
+    opacity: 0.5;
+    transition: 0.3s;
 }
 
-.menuButton {
-    font-size: 30px;
+#menuContainer {
     cursor: pointer;
-    right: 15px;
     float: right;
-    color: white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.menuButton:focus {
+#menuContainer:focus {
     outline: none;
 }
 
@@ -127,9 +127,58 @@ body {
     border-radius: 4px;
     padding: 10px 16px;
     color: #fff;
-    background-color: #428bca;
+    background-color: #309bd1;
     border-color: #357ebd;
     min-width: 100px;
+}
+
+#progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #309bd1;
+    width: 0;
+    transition: width 157ms;
+}
+
+:link:focus,
+ :visited:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+
+/* Rotate first bar */
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+
+/* Fade out the second bar */
+
+.change .bar2 {
+    opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-7px, -7px);
 }
 
 

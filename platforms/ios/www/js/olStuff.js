@@ -11,10 +11,9 @@ var olStuff = (function() {
     var watchIdCompass;
     var accuracyFeature;
     var arrowFeature;
-
-
     var ovalFeature;
 
+    var xyzLayer = [];
 
     proj4.defs('EPSG:21781', '+proj=somerc +lat_0=46.95240555555556 ' +
         '+lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel ' +
@@ -42,7 +41,7 @@ var olStuff = (function() {
 
 
 
-    function _createXYZSource(layerName, imgExt) {
+    function _createXYZSource() {
 
         var resolutions = [4000, 3750, 3500, 3250, 3000, 2750, 2500, 2250,
             2000, 1750, 1500, 1250, 1000, 750, 650, 500, 250,
@@ -54,7 +53,7 @@ var olStuff = (function() {
             cacheSize: 32768,
             crossOrigin: 'anonymous',
             //url: 'http://wmtsproxy.smm-admin.ch:8082/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/21781/{z}/{y}/{x}.jpeg',
-            url: 'https://wmts.geo.admin.ch/1.0.0/' + layerName + '/default/current/21781/{z}/{y}/{x}' + imgExt,
+            url: LayerModule.getLayerUrl(),
             //tileUrlFunction: function() { console.log("url") },
             tileLoadFunction: function(imageTile, src) {
 
@@ -218,7 +217,7 @@ var olStuff = (function() {
                 var y = -imageTile.tileCoord[2] - 1;
 
                 //var filename = cordova.file.externalDataDirectory + '/tiles/' + z.toString() + '/' + y.toString() + '/' + x.toString() + '.jpeg';
-                var fileName = cordova.file.dataDirectory + '/tiles/' + layerName + '/' + z.toString() + '/' + y.toString() + '/' + x.toString() + imgExt;
+                var fileName = cordova.file.dataDirectory + '/tiles/' + LayerModule.getLayerName() + '/' + z.toString() + '/' + y.toString() + '/' + x.toString() + LayerModule.getExt();
 
                 window.resolveLocalFileSystemURL(fileName, function(o) {
                         //get the local stored tile
@@ -235,7 +234,7 @@ var olStuff = (function() {
 
                                 cachedir = cordova.file.tempDirectory;
                             }
-                            var cacheName = cachedir + 'blankProj/temp/' + layerName + '/' + z.toString() + y.toString() + x.toString() + imgExt;
+                            var cacheName = cachedir + 'blankProj/temp/' + LayerModule.getLayerName() + '/' + z.toString() + y.toString() + x.toString() + LayerModule.getExt();
                             /*
                             //this apporach could be uesd in order to chache the files...
                             window.resolveLocalFileSystemURL(cacheName, function(o2) {
@@ -305,13 +304,13 @@ var olStuff = (function() {
             }),
         });
     }
-    var swissLayer = createSwissLayer();
+
 
     function createSwissLayer() {;
         //var extent = [ 420000, 30000, 900000, 350000 ];
         var l = new ol.layer.Tile({
             //useInterimTilesOnError: false,
-            source: _createXYZSource("ch.swisstopo.pixelkarte-farbe", ".jpeg")
+            source: _createXYZSource()
         });
         //var source1 = l.getSource();
         //source1.setRenderReprojectionEdges(true);
@@ -321,7 +320,8 @@ var olStuff = (function() {
 
 
     function init() {
-
+        var swissLayer = createSwissLayer();
+        xyzLayer = swissLayer;
         var olStyle = getOlStyles();       
         ovalFeature  =  new  ol.Feature({
             geometry:  new  ol.geom.Point([0,  0])
@@ -385,6 +385,17 @@ var olStuff = (function() {
             loadTilesWhileAnimating: true,
             loadTilesWhileInteracting: true
 
+        });
+        var progress = new Progress(document.getElementById('progress'));
+        swissLayer.getSource().on('tileloadstart', function() {
+            progress.addLoading();
+        });
+
+        swissLayer.getSource().on('tileloadend', function() {
+            progress.addLoaded();
+        });
+        swissLayer.getSource().on('tileloaderror', function() {
+            progress.addLoaded();
         });
         /*
         swissLayer.getSource().on('tileloadend', function(e) {
@@ -570,10 +581,15 @@ var olStuff = (function() {
         }
     }
 
+    function getXYZLayer() {
+        return xyzLayer;
+    }
+
     return {
         init: init,
         toggleGPS: toggleGPS,
-        setArrowStyle: setArrowStyle
+        setArrowStyle: setArrowStyle,
+        getXYZLayer: getXYZLayer
     }
 
 }());

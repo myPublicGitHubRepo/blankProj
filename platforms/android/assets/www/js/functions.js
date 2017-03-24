@@ -36,11 +36,9 @@ var fileTransfer = null;
         document.getElementById("downloadBtn").addEventListener("click", createFile);
         document.getElementById("downloadBtn").disabled = false;*/
 
-        document.getElementById("drawBtn").addEventListener("click", drawOkBtnClick);
-        document.getElementById("drawBtn").disabled = false;
 
 
-        document.getElementById("prefBtn").addEventListener("click", PreferenceModule.go2pref);
+
 
         document.getElementById("cancelBtn").addEventListener("click", cancelDraw);
         document.getElementById("cancelBtn").disabled = false;
@@ -73,7 +71,7 @@ var fileTransfer = null;
 
             //Do the other stuff related to first time launch
         }
-
+        MenuModule.init();
         console.log("Device ready done");
         navigator.splashscreen.hide();
 
@@ -169,13 +167,14 @@ function addInteraction(source) {
 var isDraw = false;
 
 function drawOkBtnClick() {
+    MenuModule.closeNav();
     if (isDraw) {
         downloadDraw();
 
     } else {
         startDraw();
         isDraw = true;
-        document.getElementById("drawBtn").innerHTML = "Ok";
+        document.getElementById("drawMenu").innerHTML = "Ok";
     }
 }
 
@@ -190,12 +189,21 @@ function startDraw() {
     }
 
     if (draw != null) { olMap.removeInteraction(draw); }
-    var theStyle = new ol.style.Style({
-        //I don't know how to get the color of your kml to fill each room
-        stroke: new ol.style.Stroke({ color: '#0000FF', width: 3 }),
+    var theStyle = [
+        new ol.style.Style({
+            //I don't know how to get the color of your kml to fill each room
+            stroke: new ol.style.Stroke({ color: '#FFFFFF', width: 6 })
 
-        //fill: red
-    });
+            //fill: red
+        }),
+        new ol.style.Style({
+            //I don't know how to get the color of your kml to fill each room
+            stroke: new ol.style.Stroke({ color: '#309bd1', width: 3 }),
+
+            //fill: red
+        })
+
+    ];
 
     var source = new ol.source.Vector({
         // features: [circleFeature]
@@ -269,12 +277,16 @@ function downloadDraw() {
         alert("done");
         return;
     }
-    var theStyle = new ol.style.Style({
-        //I don't know how to get the color of your kml to fill each room
-        stroke: new ol.style.Stroke({ color: '#ff0000', width: 4 })
+    var theStyle = [
+        new ol.style.Style({
 
-        //fill: red
-    });
+            stroke: new ol.style.Stroke({ color: '#FFFFFF', width: 6 })
+        }),
+        new ol.style.Style({
+            stroke: new ol.style.Stroke({ color: '#4CAF50', width: 4 })
+        })
+
+    ];
 
     //will called recurively till allFeatures is empty
     olMap.removeInteraction(draw);
@@ -292,7 +304,7 @@ function cancelDraw() {
     vector.getSource().clear();
     allFeatures = [];
     isDraw = false;
-    document.getElementById("drawBtn").innerHTML = "Draw";
+    document.getElementById("drawMenu").innerHTML = "Draw";
 }
 
 
