@@ -53,6 +53,15 @@ body {
 .topComponents {
     margin: 10px;
     z-index: 5;
+    color: white;
+    opacity: 1;
+    font-family: sans-serif;
+}
+
+#topBarTitle {
+    margin-top: 15px;
+    font-size: 25px;
+    display: inline-block;
 }
 
 #topBar {

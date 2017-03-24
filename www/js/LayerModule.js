@@ -26,25 +26,30 @@ var LayerModule = (function() {
     }
 
     function setPixelkarteFarbe() {
+        if (name == "ch.swisstopo.pixelkarte-farbe") return;
         name = "ch.swisstopo.pixelkarte-farbe";
         ext = ".jpeg";
         time = "current";
         dimension = "21781";
         _refreshLayers()
+        TileModule.deleteTemp();
     }
 
     function setSwissimage() {
+        if (name == "ch.swisstopo.swissimage") return;
         name = "ch.swisstopo.swissimage";
         ext = ".jpeg";
         time = "current";
         dimension = "21781";
         _refreshLayers();
+        TileModule.deleteTemp();
     }
 
     function _refreshLayers() {
         olStuff.getXYZLayer().getSource().setUrl(getLayerUrl());
-        TileModule.deleteTemp();
         olStuff.getXYZLayer().getSource().refresh()
+        TileModule.deleteTemp();
+
 
     }
 

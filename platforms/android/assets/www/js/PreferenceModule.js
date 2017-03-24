@@ -45,6 +45,7 @@ var PreferenceModule = (function() {
     }
 
     function go2pref() {
+        MenuModule.closeNav();
         plugins.appPreferences.show(function() {}, _prefFail);
     }
 

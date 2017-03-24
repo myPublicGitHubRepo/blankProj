@@ -3,7 +3,7 @@ var MenuModule = (function() {
     var mySidenavBackground;
     var topBar;
     var menuContainer;
-
+    var topBarTitle;
     var isMenuOpen = false;
 
     function init() {
@@ -11,6 +11,8 @@ var MenuModule = (function() {
         mySidenavBackground = document.getElementById("mySidenavBackground");
         topBar = document.getElementById("topBar");
         menuContainer = document.getElementById("menuContainer");
+        topBarTitle = document.getElementById("topBarTitle");
+
 
         document.getElementById("prefMenu").addEventListener("click", PreferenceModule.go2pref);
         document.getElementById("pixelFarbeMenu").addEventListener("click", LayerModule.setPixelkarteFarbe);
@@ -30,6 +32,7 @@ var MenuModule = (function() {
             mySidenavBackground.style.width = "100%";
 
             topBar.style.opacity = 1;
+            topBarTitle.innerHTML = "Settings";
             isMenuOpen = true;
         }
     }
@@ -41,6 +44,8 @@ var MenuModule = (function() {
             mySidenav.style.width = "0";
             mySidenavBackground.style.width = "0";
             topBar.style.opacity = 0.5;
+            topBarTitle.innerHTML = "Swiss Map";
+
             isMenuOpen = false;
         }
 
