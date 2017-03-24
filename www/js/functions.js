@@ -179,7 +179,7 @@ function drawOkBtnClick() {
 }
 
 function startDraw() {
-    $("#cancelBtn").show();
+    $("#cancelBtn").show(200);
 
 
 
@@ -291,6 +291,7 @@ function downloadDraw() {
     //will called recurively till allFeatures is empty
     olMap.removeInteraction(draw);
     $('#myProgress').show(200);
+    $("#cancelBtn").hide(200);
     var f = allFeatures.pop();
     f.setStyle(theStyle);
     var c = f.getGeometry().getExtent();
@@ -299,7 +300,7 @@ function downloadDraw() {
 }
 
 function cancelDraw() {
-    $("#cancelBtn").hide();
+    $("#cancelBtn").hide(200);
     olMap.removeInteraction(draw);
     vector.getSource().clear();
     allFeatures = [];

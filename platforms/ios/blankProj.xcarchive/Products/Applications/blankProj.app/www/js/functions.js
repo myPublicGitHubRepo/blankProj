@@ -36,8 +36,8 @@ var fileTransfer = null;
         document.getElementById("downloadBtn").addEventListener("click", createFile);
         document.getElementById("downloadBtn").disabled = false;*/
 
-        document.getElementById("drawBtn").addEventListener("click", drawOkBtnClick);
-        document.getElementById("drawBtn").disabled = false;
+
+
 
 
         document.getElementById("cancelBtn").addEventListener("click", cancelDraw);
@@ -167,18 +167,19 @@ function addInteraction(source) {
 var isDraw = false;
 
 function drawOkBtnClick() {
+    MenuModule.closeNav();
     if (isDraw) {
         downloadDraw();
 
     } else {
         startDraw();
         isDraw = true;
-        document.getElementById("drawBtn").innerHTML = "Ok";
+        document.getElementById("drawMenu").innerHTML = "Ok";
     }
 }
 
 function startDraw() {
-    $("#cancelBtn").show();
+    $("#cancelBtn").show(200);
 
 
 
@@ -290,6 +291,7 @@ function downloadDraw() {
     //will called recurively till allFeatures is empty
     olMap.removeInteraction(draw);
     $('#myProgress').show(200);
+    $("#cancelBtn").hide(200);
     var f = allFeatures.pop();
     f.setStyle(theStyle);
     var c = f.getGeometry().getExtent();
@@ -298,12 +300,12 @@ function downloadDraw() {
 }
 
 function cancelDraw() {
-    $("#cancelBtn").hide();
+    $("#cancelBtn").hide(200);
     olMap.removeInteraction(draw);
     vector.getSource().clear();
     allFeatures = [];
     isDraw = false;
-    document.getElementById("drawBtn").innerHTML = "Draw";
+    document.getElementById("drawMenu").innerHTML = "Draw";
 }
 
 

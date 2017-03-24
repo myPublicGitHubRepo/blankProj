@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		7BHVDjROGujG7R2i610cjupAX7w=
+		gfJjW7FTuz749WHyXmzI48EJikU=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		E9MxIKihchLQOvN8Gz/Mh5icBj8=
+		BEpNoE/XS+R3WzvWi/qRkDLOZtw=
 		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		dQJi6chEJEljrd4oDItA9FfddAM=
+		QkfnDKYNB2dc5i515/HrBRqfiZU=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>
-		SzKmlTvDZlc8+Ok+4topwMlrOE4=
+		Pzcs424uB6zy8H7kJjnzx1xNAE0=
 		</data>
 		<key>Settings.bundle/en.lproj/Root.strings</key>
 		<dict>
@@ -215,11 +215,11 @@
 		</data>
 		<key>www/css/index.css</key>
 		<data>
-		8JWVoWNar7RLVTd7t7n4wUr5EbA=
+		cdrLH02wC00HCksDwTVW8oUa8Ps=
 		</data>
 		<key>www/css/menu.css</key>
 		<data>
-		cII2oDXt011F02XuOyvdVyYP8wA=
+		Qzfmqre19F337CiE9zoNcn+ZWz4=
 		</data>
 		<key>www/css/ol.css</key>
 		<data>
@@ -479,7 +479,7 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		TEM+rlG7hwzuN2lYY4Ja879U5Ww=
+		0lefPUznWD7DgIb8InRwJ8x0BNM=
 		</data>
 		<key>www/js/21781-1753.js</key>
 		<data>
@@ -495,15 +495,15 @@
 		</data>
 		<key>www/js/LayerModule.js</key>
 		<data>
-		zpQtGznszqiCGhKK2S3O7wG1aaU=
+		5qeo+sclkggCKpaunoowsMyxxSE=
 		</data>
 		<key>www/js/MenuModule.js</key>
 		<data>
-		x3nbOaLNQVHe3LoMhHNx1T82uWU=
+		PEcqoIJvli0IP3/QJ6gCYEBiA+c=
 		</data>
 		<key>www/js/PreferenceModule.js</key>
 		<data>
-		GnLDFw5LqYIoT3rerXL7P0tR+R0=
+		fHvW02wDr4xUoXkjYmiknpd/dIk=
 		</data>
 		<key>www/js/ProgressModule.js</key>
 		<data>
@@ -515,11 +515,11 @@
 		</data>
 		<key>www/js/TileModule.js</key>
 		<data>
-		D/4ckUKhIK+QV8G0GUhlZAJR3wc=
+		Sq2K2mo2B9xGlqfhWKuwIGk7ras=
 		</data>
 		<key>www/js/TransferModule.js</key>
 		<data>
-		vglBmmcK2ZvGyBxRul098DuDwbM=
+		2zAldt1WQGplIt8qOuZdZ5QZeLg=
 		</data>
 		<key>www/js/base64.js</key>
 		<data>
@@ -527,7 +527,7 @@
 		</data>
 		<key>www/js/functions.js</key>
 		<data>
-		dHFA0LbQIhMXlABwB95ZqhkqE3U=
+		UrrJWFKHSqgJ+2oCtjQt5ZA0ss8=
 		</data>
 		<key>www/js/geoAdminAPI/AA_loader-3.18.2.js</key>
 		<data>
@@ -571,7 +571,7 @@
 		</data>
 		<key>www/js/olStuff.js</key>
 		<data>
-		NLPCeZ8j8SRXMK0NN6AkQ9QeDNw=
+		Glqb/dbP66yRu12tdtkcpnK1uwQ=
 		</data>
 		<key>www/js/olStyles.js</key>
 		<data>
@@ -984,11 +984,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7BHVDjROGujG7R2i610cjupAX7w=
+			gfJjW7FTuz749WHyXmzI48EJikU=
 			</data>
 			<key>hash2</key>
 			<data>
-			665t34+9BJBSjDyCwEs/g2dfGAMGd/IaIao1VhxCXK4=
+			JHQ4PuTiCHoCQMILmGUoapiEIn4U49mh0VpxwV7xrNw=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -1006,11 +1006,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E9MxIKihchLQOvN8Gz/Mh5icBj8=
+			BEpNoE/XS+R3WzvWi/qRkDLOZtw=
 			</data>
 			<key>hash2</key>
 			<data>
-			mnhJFhs0jxGYgGv48fHGNjmwtB374cGRmIzdbJcQq0g=
+			UG/TeSTw4kvS5KMoZDPlpCFVI1+rxpgJv7rsTT2SYPE=
 			</data>
 		</dict>
 		<key>CDVNotification.bundle/beep.wav</key>
@@ -1182,11 +1182,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dQJi6chEJEljrd4oDItA9FfddAM=
+			QkfnDKYNB2dc5i515/HrBRqfiZU=
 			</data>
 			<key>hash2</key>
 			<data>
-			AgzfU/aY3TWuGhswPN+LNjm2K6JelhJvctgwECZxz6k=
+			Hic2GXvrgG0fU9IZujKRArov8e82sL1B5Zwql9MGRbM=
 			</data>
 		</dict>
 		<key>Settings.bundle/.me.apla.apppreferences</key>
@@ -1204,11 +1204,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SzKmlTvDZlc8+Ok+4topwMlrOE4=
+			Pzcs424uB6zy8H7kJjnzx1xNAE0=
 			</data>
 			<key>hash2</key>
 			<data>
-			q6n8WFG9f73Go6Xd0WAD0KM06PwVz83ojOJ8SE5GEHo=
+			sNk9ba/QboysYkiLRrObeylLsFJdm8+qt+XN1G3wgDc=
 			</data>
 		</dict>
 		<key>Settings.bundle/en.lproj/Root.strings</key>
@@ -1305,22 +1305,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8JWVoWNar7RLVTd7t7n4wUr5EbA=
+			cdrLH02wC00HCksDwTVW8oUa8Ps=
 			</data>
 			<key>hash2</key>
 			<data>
-			MEdG7LVh+AkPOQ3egI4JVWfX30X4Jcey8c6hvRSHW4c=
+			Xf8ddHExUeECEPzcWmpDh6MdU04sMaTu3pFBBNFWC88=
 			</data>
 		</dict>
 		<key>www/css/menu.css</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cII2oDXt011F02XuOyvdVyYP8wA=
+			Qzfmqre19F337CiE9zoNcn+ZWz4=
 			</data>
 			<key>hash2</key>
 			<data>
-			ljdv6R/Mq4v9cQlurCFaUxzMiyp5BW+xE6KyBshCD0I=
+			bRzkFxj//N0z0MM2Qj7CuiWzCz9UkfkERJ54NJsoBjs=
 			</data>
 		</dict>
 		<key>www/css/ol.css</key>
@@ -2031,11 +2031,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TEM+rlG7hwzuN2lYY4Ja879U5Ww=
+			0lefPUznWD7DgIb8InRwJ8x0BNM=
 			</data>
 			<key>hash2</key>
 			<data>
-			5olGurjPgdsOrelQc1DRpuBJP7sgQjoiV+NAGnUPWbE=
+			AiRObODZtYZilOAvZ2hHUt4J1VsUpiOByWYjmgpAnew=
 			</data>
 		</dict>
 		<key>www/js/21781-1753.js</key>
@@ -2075,33 +2075,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zpQtGznszqiCGhKK2S3O7wG1aaU=
+			5qeo+sclkggCKpaunoowsMyxxSE=
 			</data>
 			<key>hash2</key>
 			<data>
-			GQYCgk6KCtftExdNGMbMidylbDKJztEmpa6fRJ6wEtA=
+			HYx/FcTllim1tIq0XuxuXS1hqa5mhivSxaXMdKdqQjI=
 			</data>
 		</dict>
 		<key>www/js/MenuModule.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			x3nbOaLNQVHe3LoMhHNx1T82uWU=
+			PEcqoIJvli0IP3/QJ6gCYEBiA+c=
 			</data>
 			<key>hash2</key>
 			<data>
-			ON0Y8yWsFTlbVpAGnj2BJbRY72RJ3of/vhEzOWdyqmU=
+			0dZXL/R+huB/Tqb8wtD1m2eOMwnCvHmxPmMVAcbdnVM=
 			</data>
 		</dict>
 		<key>www/js/PreferenceModule.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GnLDFw5LqYIoT3rerXL7P0tR+R0=
+			fHvW02wDr4xUoXkjYmiknpd/dIk=
 			</data>
 			<key>hash2</key>
 			<data>
-			RxGonHz3QqnzSFOQmnh+xvLzFQ5WrR976+mLFwDlHzc=
+			t8nMUg88QHkBEDIHJ8SsXZZMlHkPhSaGBe9d6Cly6Tw=
 			</data>
 		</dict>
 		<key>www/js/ProgressModule.js</key>
@@ -2130,22 +2130,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D/4ckUKhIK+QV8G0GUhlZAJR3wc=
+			Sq2K2mo2B9xGlqfhWKuwIGk7ras=
 			</data>
 			<key>hash2</key>
 			<data>
-			1u8wfx39fTTOtEUBICgxozBPbdqDYzlvTSYHQq4yy7w=
+			2EIJ53Q0hTMMQ2NrVASO92+yOIaQEIjuUEEL8mxES9Y=
 			</data>
 		</dict>
 		<key>www/js/TransferModule.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vglBmmcK2ZvGyBxRul098DuDwbM=
+			2zAldt1WQGplIt8qOuZdZ5QZeLg=
 			</data>
 			<key>hash2</key>
 			<data>
-			MdB3ZgqXMq3e1SYlvvImIjjgNymkMQaJ64wS1+ysbUw=
+			85847cOlf8Ot54IMaF4tRpjE/2Qr/KuCL/YxhFs3WM8=
 			</data>
 		</dict>
 		<key>www/js/base64.js</key>
@@ -2163,11 +2163,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dHFA0LbQIhMXlABwB95ZqhkqE3U=
+			UrrJWFKHSqgJ+2oCtjQt5ZA0ss8=
 			</data>
 			<key>hash2</key>
 			<data>
-			VOJhSQB9U+vW/69TfQOrGLDdKgjk6L6eJWpV1whb3Ss=
+			p/ck8T9AvKPFFnhrxDTKNgnuLE/3VT7wY2g465DEqns=
 			</data>
 		</dict>
 		<key>www/js/geoAdminAPI/AA_loader-3.18.2.js</key>
@@ -2284,11 +2284,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NLPCeZ8j8SRXMK0NN6AkQ9QeDNw=
+			Glqb/dbP66yRu12tdtkcpnK1uwQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			RhRu+l4/Ie/kIl3uH6HSpL2w3TvNmdq3Ab9RKnqqbFg=
+			c85j4pjS8rxXmsoSKiU6HzL3O0tmV2x/S5dyClDBF4Y=
 			</data>
 		</dict>
 		<key>www/js/olStyles.js</key>

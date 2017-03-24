@@ -79,7 +79,7 @@ var TileModule = (function() {
         //    //an error occurred
         //    return true;
         //}
-        _downloadMissingTiles(missingTiles);
+        TransferModule.downlodTileArray(missingTiles);
         console.log("done");
         return false;
     }
@@ -95,33 +95,12 @@ var TileModule = (function() {
         //    //an error occurred
         //    return true;
         //}
-        _downloadMissingTiles(missingTiles);
+        TransferModule.downlodTileArray(missingTiles);
         console.log("done");
         return false;
     }
 
-    function _downloadMissingTiles(missingTiles) {
-        var hasError = false;
-        //change this const to a variable
-        //var layer = "ch.swisstopo.pixelkarte-farbe";
-        //download the tiles
-        //TileRequester tr = new TileRequester(u, layer);
-        // Do it Multithreaded and Async Download
 
-        /*
-        for (tile in missingTiles) {
-            // skip loop if the property is from prototype
-            if (!missingTiles.hasOwnProperty(tile)) continue;
-            //alert("tile zoom"+tile.zoom);
-            //alert("tile zoom"+missingTiles[tile].zoom);
-
-            TransferModule.downlodTile(missingTiles[tile].zoom, missingTiles[tile].row, missingTiles[tile].col);
-        }
-        */
-
-
-        TransferModule.downlodTileArray(missingTiles);
-    }
 
 
     function _getMissingTilesForPerimeter(zoom, minRow, minCol, maxRow, maxCol) {
@@ -226,6 +205,7 @@ var TileModule = (function() {
 
     function downloadDefault() {
         var ext = ".jpeg";
+        var layerName = "ch.swisstopo.pixelkarte-farbe";
 
         var z = 15;
         var maxY = 3;
@@ -256,7 +236,7 @@ var TileModule = (function() {
         function _dRowCol(z, maxY, maxX) {
             for (var y = 0; y < maxY; y++) {
                 for (var x = 0; x < maxX; x++) {
-                    TransferModule.downlodTile(z, y, x, ext);
+                    TransferModule.downlodTile(z, y, x, layerName, ext);
                 }
             }
         }

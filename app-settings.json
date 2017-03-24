@@ -18,11 +18,6 @@
             "title": "English (UK)"
         }]
     }, {
-        "title": "Debug",
-        "type": "toggle",
-        "default": false,
-        "key": "debug"
-    }, {
         "title": "Big arrow",
         "type": "toggle",
         "default": false,

@@ -58,67 +58,67 @@ var olStuff = (function() {
             tileLoadFunction: function(imageTile, src) {
 
                 /*
-                                         var z = imageTile.tileCoord[0];
-                                    var x = imageTile.tileCoord[1];
-                                    var y = -imageTile.tileCoord[2] - 1;
-                                    console.time(z.toString() + y.toString() + x.toString());
-                                    cordovaHTTP.setHeader("Referer", "http://smm-admin.ch");
+                                                 var z = imageTile.tileCoord[0];
+                                            var x = imageTile.tileCoord[1];
+                                            var y = -imageTile.tileCoord[2] - 1;
+                                            console.time(z.toString() + y.toString() + x.toString());
+                                            cordovaHTTP.setHeader("Referer", "http://smm-admin.ch");
 
-                                    //var filename = cordova.file.externalDataDirectory + '/tiles/' + z.toString() + '/' + y.toString() + '/' + x.toString() + '.jpeg';
-                                    var fileName = cordova.file.dataDirectory + '/tiles/' + layerName + '/' + z.toString() + '/' + y.toString() + '/' + x.toString() + imgExt;
+                                            //var filename = cordova.file.externalDataDirectory + '/tiles/' + z.toString() + '/' + y.toString() + '/' + x.toString() + '.jpeg';
+                                            var fileName = cordova.file.dataDirectory + '/tiles/' + layerName + '/' + z.toString() + '/' + y.toString() + '/' + x.toString() + imgExt;
 
-                                    window.resolveLocalFileSystemURL(fileName, function(o) {
-                                            //get the local stored tile
-                                            imageTile.getImage().src = fileName;
-                                        },
-                                        function(e) {
-                                            //get the tile from internet or an "network error" image
-                                            if (navigator.connection.type == Connection.NONE) {
-                                                imageTile.getImage().src = cordova.file.applicationDirectory + 'www/images/offline.jpeg';
-                                            } else {
-                                                //check if it's cached/or in temp
-                                                var cachedir = cordova.file.cacheDirectory;
-                                                if (device.platform == "iOS") {
+                                            window.resolveLocalFileSystemURL(fileName, function(o) {
+                                                    //get the local stored tile
+                                                    imageTile.getImage().src = fileName;
+                                                },
+                                                function(e) {
+                                                    //get the tile from internet or an "network error" image
+                                                    if (navigator.connection.type == Connection.NONE) {
+                                                        imageTile.getImage().src = cordova.file.applicationDirectory + 'www/images/offline.jpeg';
+                                                    } else {
+                                                        //check if it's cached/or in temp
+                                                        var cachedir = cordova.file.cacheDirectory;
+                                                        if (device.platform == "iOS") {
 
-                                                    cachedir = cordova.file.tempDirectory;
-                                                }
-                                                var cacheName = cachedir + '/blankProj/temp/' + layerName + '/' + z.toString() + '/' + y.toString() + '/' + x.toString() + imgExt;
-                                                window.resolveLocalFileSystemURL(cacheName, function(o2) {
-                                                        //get the cached tile
+                                                            cachedir = cordova.file.tempDirectory;
+                                                        }
+                                                        var cacheName = cachedir + '/blankProj/temp/' + layerName + '/' + z.toString() + '/' + y.toString() + '/' + x.toString() + imgExt;
+                                                        window.resolveLocalFileSystemURL(cacheName, function(o2) {
+                                                                //get the cached tile
 
-                                                        imageTile.getImage().src = cacheName;
-                                                    },
-                                                    function(e2) {
-                                                        //not in persistent and also not cached
+                                                                imageTile.getImage().src = cacheName;
+                                                            },
+                                                            function(e2) {
+                                                                //not in persistent and also not cached
 
-                                                        //console.log(url);
+                                                                //console.log(url);
 
-                                                        //var uri2 = encodeURI(src);
+                                                                //var uri2 = encodeURI(src);
 
-                                                        cordovaHTTP.downloadFile(src, {
+                                                                cordovaHTTP.downloadFile(src, {
 
-                                                        }, {}, cacheName, function(entry) {
+                                                                }, {}, cacheName, function(entry) {
 
-                                                            imageTile.getImage().src = entry.nativeURL;
-                                                            console.timeEnd(z.toString() + y.toString() + x.toString());
-
-
+                                                                    imageTile.getImage().src = entry.nativeURL;
+                                                                    console.timeEnd(z.toString() + y.toString() + x.toString());
 
 
-                                                        }, function(response) {
-                                                            console.error(response.error);
-                                                        });
+
+
+                                                                }, function(response) {
+                                                                    console.error(response.error);
+                                                                });
+
+                                                            }
+                                                        );
+
+
+
 
                                                     }
-                                                );
-
-
-
-
-                                            }
-                                        });
+                                                });
                 
-                                     */
+                                             */
 
                 /*
                 var z = imageTile.tileCoord[0];
@@ -234,7 +234,7 @@ var olStuff = (function() {
 
                                 cachedir = cordova.file.tempDirectory;
                             }
-                            var cacheName = cachedir + 'blankProj/temp/' + LayerModule.getLayerName() + '/' + z.toString() + y.toString() + x.toString() + LayerModule.getExt();
+                            var cacheName = cachedir + 'blankProj/temp/' + LayerModule.getLayerName() + '/' + z.toString() + '_' + y.toString() + '_' + x.toString() + LayerModule.getExt();
                             /*
                             //this apporach could be uesd in order to chache the files...
                             window.resolveLocalFileSystemURL(cacheName, function(o2) {
@@ -360,6 +360,7 @@ var olStuff = (function() {
             controls: ol.control.defaults({
                 attribution: false,
                 zoom: false,
+                rotate: false
             }),
             //renderer: 'webgl', // use WebGL renderer
             //renderer: 'dom',
@@ -373,7 +374,7 @@ var olStuff = (function() {
                 center: [660450, 192550],
                 resolution: 750,
                 resolutions: [1000, 500, 250,
-                    100, 50, 20, 10, 5, 2.5, 1.5, 0.5
+                    100, 50, 20, 10, 5, 2.5, 1.5, 0.5, 0.1
                 ]
 
                 //minResolution: 0.1,
@@ -386,6 +387,7 @@ var olStuff = (function() {
             loadTilesWhileInteracting: true
 
         });
+        /*
         var progress = new Progress(document.getElementById('progress'));
         swissLayer.getSource().on('tileloadstart', function() {
             progress.addLoading();
@@ -397,6 +399,10 @@ var olStuff = (function() {
         swissLayer.getSource().on('tileloaderror', function() {
             progress.addLoaded();
         });
+        */
+
+
+
         /*
         swissLayer.getSource().on('tileloadend', function(e) {
             console.log(e);
@@ -585,11 +591,95 @@ var olStuff = (function() {
         return xyzLayer;
     }
 
+    function addOverLayer(layerObj) {
+        var resolutions = [4000, 3750, 3500, 3250, 3000, 2750, 2500, 2250,
+            2000, 1750, 1500, 1250, 1000, 750, 650, 500, 250,
+            100, 50, 20, 10, 5, 2.5, 2, 1.5, 1, 0.5
+        ];
+        //var matrixIds = [];
+        var extent = [420000, 30000, 900000, 350000];
+        var overlayer = new ol.layer.Tile({
+            //useInterimTilesOnError: false,
+            source: new ol.source.XYZ({
+                cacheSize: 32768,
+                crossOrigin: 'anonymous',
+                //url: 'http://wmtsproxy.smm-admin.ch:8082/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/21781/{z}/{y}/{x}.jpeg',
+                url: layerObj.url,
+                //tileUrlFunction: function() { console.log("url") },
+                tileLoadFunction: function(imageTile, src) {
+                    var z = imageTile.tileCoord[0];
+                    var x = imageTile.tileCoord[1];
+                    var y = -imageTile.tileCoord[2] - 1;
+
+                    //var filename = cordova.file.externalDataDirectory + '/tiles/' + z.toString() + '/' + y.toString() + '/' + x.toString() + '.jpeg';
+
+
+
+                    //get the tile from internet or an "network error" image
+                    if (navigator.connection.type == Connection.NONE || PreferenceModule.isOffline()) {
+                        imageTile.getImage().src = cordova.file.applicationDirectory + 'www/images/offline.jpeg';
+                    } else {
+                        //check if it's cached/or in temp
+                        var cachedir = cordova.file.cacheDirectory;
+                        if (device.platform == "iOS") {
+
+                            cachedir = cordova.file.tempDirectory;
+                        }
+                        var cacheName = cachedir + 'blankProj/temp/' + layerObj.name + '/' + z.toString() + '_' + y.toString() + '_' + x.toString() + layerObj.ext;
+                        var uri = encodeURI(src);
+                        fileTransfer.download(
+                            uri,
+                            cacheName,
+                            function(entry) {
+
+                                imageTile.getImage().src = entry.nativeURL;
+                                //DatabaseModule.insertTile(x, y, z, ext);
+                            },
+                            function(error) {
+                                console.log("download error source " + error.source);
+                                console.log("download error target " + error.target);
+                                console.log("upload error code" + error.code);
+
+                            },
+                            false, { //No idea... do i need this???
+                                headers: {
+                                    //"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                                    "Referer": "http://smm-admin.ch"
+                                }
+                            }
+                        );
+                    }
+                },
+                projection: 'EPSG:21781',
+                //projection: ol.proj.get("EPSG:21781"),
+                tileGrid: new ol.tilegrid.WMTS({
+                    matrixIds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+                    origin: [420000, 350000],
+                    resolutions: resolutions,
+                    //tileSize: 512,
+                }),
+            })
+        });
+        olMap.addLayer(overlayer);
+        return overlayer;
+    }
+
+    function removeOverLayer(overlayer) {
+        olMap.removeLayer(overlayer);
+    }
+
+
+
+
     return {
         init: init,
         toggleGPS: toggleGPS,
         setArrowStyle: setArrowStyle,
-        getXYZLayer: getXYZLayer
+        getXYZLayer: getXYZLayer,
+        addOverLayer: addOverLayer,
+        removeOverLayer: removeOverLayer
     }
+
+
 
 }());

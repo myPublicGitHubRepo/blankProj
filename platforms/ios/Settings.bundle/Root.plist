@@ -42,16 +42,6 @@
         <key>Type</key>
         <string>PSToggleSwitchSpecifier</string>
         <key>Key</key>
-        <string>debug</string>
-        <key>Title</key>
-        <string>Debug</string>
-        <key>DefaultValue</key>
-        <false/>
-      </dict>
-      <dict>
-        <key>Type</key>
-        <string>PSToggleSwitchSpecifier</string>
-        <key>Key</key>
         <string>bigArrow</string>
         <key>Title</key>
         <string>Big arrow</string>

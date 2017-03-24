@@ -26,17 +26,16 @@ var TransferModule = (function() {
         );
     }
 
-    function downlodTile(z, y, x, ext) {
-        var layerTile = "ch.swisstopo.pixelkarte-farbe";
-        var ext = ".jpeg"
-        var prefix = "https://wmts.geo.admin.ch/1.0.0/" + layerTile + "/default/current/21781/";
+    function downlodTile(z, y, x, layerName, ext) {
 
-        //var prefix = "http://wmtsproxy.smm-admin.ch:8082/1.0.0/" + layerTile + "/default/current/21781/";
+        //var prefix = "https://wmts.geo.admin.ch/1.0.0/" + layerTile + "/default/current/21781/";
+
+        var prefix = LayerModule.getPrefix();
         //var prefix = "http://192.168.1.34:3001/tu/";
         var url = prefix + z + '/' + y + '/' + x + ext;
 
         //var filePath = cordova.file.externalDataDirectory + '/tiles/' + layerTile + '/' + z + '/' + y + '/' + x + ext;        
-        var filePath = cordova.file.dataDirectory + '/tiles/' + layerTile + '/' + z + '/' + y + '/' + x + ext;
+        var filePath = cordova.file.dataDirectory + '/tiles/' + layerName + '/' + z + '/' + y + '/' + x + ext;
 
         //var fileTransfer = new FileTransfer();
         //var url = prefix + "offline.jpeg";
@@ -59,10 +58,10 @@ var TransferModule = (function() {
 
     function downlodTileArray(tiles) {
         //var fileTransfer = new FileTransfer();
-        var layerTile = "ch.swisstopo.pixelkarte-farbe";
+        var layerTile = LayerModule.getLayerName();
 
-        var ext = ".jpeg"
-        var prefix = "https://wmts.geo.admin.ch/1.0.0/" + layerTile + "/default/current/21781/";
+        var ext = LayerModule.getExt();
+        var prefix = LayerModule.getPrefix();
 
         //var prefix = "http://wmtsproxy.smm-admin.ch:8082/1.0.0/" + layerTile + "/default/current/21781/";
 

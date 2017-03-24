@@ -1,5 +1,7 @@
 var LayerModule = (function() {
-
+    var wanderland = null;
+    var wanderwege = null;
+    var dufour = null;
 
 
     var name = "ch.swisstopo.pixelkarte-farbe";
@@ -32,7 +34,7 @@ var LayerModule = (function() {
         time = "current";
         dimension = "21781";
         _refreshLayers()
-        TileModule.deleteTemp();
+        MenuModule.closeNav();
     }
 
     function setSwissimage() {
@@ -42,8 +44,69 @@ var LayerModule = (function() {
         time = "current";
         dimension = "21781";
         _refreshLayers();
-        TileModule.deleteTemp();
+        MenuModule.closeNav();
     }
+
+
+
+
+
+    function setDufour() {
+        if (name == "ch.swisstopo.hiks-dufour") return;
+        name = "ch.swisstopo.hiks-dufour";
+        ext = ".png";
+        time = "18650101";
+        dimension = "21781";
+        _refreshLayers();
+        MenuModule.closeNav();
+    }
+
+    function setSiegfried() {
+        if (name == "ch.swisstopo.hiks-siegfried") return;
+        name = "ch.swisstopo.hiks-siegfried";
+        ext = ".png";
+        time = "19260101";
+        dimension = "21781";
+        _refreshLayers();
+        MenuModule.closeNav();
+    }
+
+    function toggleWanderland() {
+        //https://wmts101.geo.admin.ch/1.0.0/ch.astra.wanderland/default/20160518/21781
+        MenuModule.closeNav();
+        if (wanderland == null) {
+            wanderland = olStuff.addOverLayer({
+                name: "ch.astra.wanderland",
+                ext: ".png",
+                url: "https://wmts.geo.admin.ch/1.0.0/ch.astra.wanderland/default/20160518/21781/{z}/{y}/{x}.png"
+            });
+        } else {
+            olStuff.removeOverLayer(wanderland);
+            wanderland = null;
+        }
+    }
+
+    function toggleWanderwege() {
+        //https: //wmts106.geo.admin.ch/1.0.0/ch.swisstopo.swisstlm3d-wanderwege/default/current/21781/
+        debugger;
+        MenuModule.closeNav();
+        if (wanderwege == null) {
+            wanderwege = olStuff.addOverLayer({
+                name: "ch.swisstopo.swisstlm3d-wanderwege",
+                ext: ".png",
+                url: "https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swisstlm3d-wanderwege/default/current/21781/{z}/{y}/{x}.png"
+            });
+        } else {
+            olStuff.removeOverLayer(wanderwege);
+            wanderwege = null;
+        }
+    }
+
+
+
+
+
+
 
     function _refreshLayers() {
         olStuff.getXYZLayer().getSource().setUrl(getLayerUrl());
@@ -70,7 +133,11 @@ var LayerModule = (function() {
         getExt: getExt,
         setPixelkarteFarbe: setPixelkarteFarbe,
         setSwissimage: setSwissimage,
-        getPrefix: getPrefix
+        setDufour: setDufour,
+        setSiegfried: setSiegfried,
+        getPrefix: getPrefix,
+        toggleWanderland: toggleWanderland,
+        toggleWanderwege: toggleWanderwege
 
     }
 
