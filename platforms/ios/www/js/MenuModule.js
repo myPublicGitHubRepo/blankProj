@@ -8,7 +8,7 @@ var MenuModule = (function() {
 
     function init() {
         mySidenav = document.getElementById("mySidenav");
-        mySidenavBackground = document.getElementById("mySidenavBackground");
+        mySidenavBackground = $("#mySidenavBackground");
         topBar = document.getElementById("topBar");
         menuContainer = document.getElementById("menuContainer");
         topBarTitle = document.getElementById("topBarTitle");
@@ -17,8 +17,19 @@ var MenuModule = (function() {
         document.getElementById("prefMenu").addEventListener("click", PreferenceModule.go2pref);
         document.getElementById("pixelFarbeMenu").addEventListener("click", LayerModule.setPixelkarteFarbe);
         document.getElementById("swissimageMenu").addEventListener("click", LayerModule.setSwissimage);
+        document.getElementById("dufourMenu").addEventListener("click", LayerModule.setDufour);
+        document.getElementById("siegfriedMenu").addEventListener("click", LayerModule.setSiegfried);
+
+
+        document.getElementById("wanderlandMenu").addEventListener("click", LayerModule.toggleWanderland);
+        document.getElementById("wanderwegeMenu").addEventListener("click", LayerModule.toggleWanderwege);
+
+
+
         document.getElementById("mySidenavBackground").addEventListener("click", closeNav);
         document.getElementById("drawMenu").addEventListener("click", drawOkBtnClick);
+
+
 
 
         document.addEventListener("backbutton", closeNav, false);
@@ -29,12 +40,11 @@ var MenuModule = (function() {
         if (!isMenuOpen) {
             menuContainer.classList.toggle("change");
             mySidenav.style.width = "250px";
-            mySidenavBackground.style.width = "100%";
-
+            mySidenavBackground.show(300);
             topBar.style.opacity = 1;
             topBarTitle.innerHTML = "Settings";
             isMenuOpen = true;
-        }
+        } else { closeNav(); }
     }
 
     function closeNav() {
@@ -42,8 +52,9 @@ var MenuModule = (function() {
             menuContainer.classList.toggle("change");
 
             mySidenav.style.width = "0";
-            mySidenavBackground.style.width = "0";
-            topBar.style.opacity = 0.5;
+            mySidenavBackground.hide(300);
+
+            topBar.style.opacity = 0.7;
             topBarTitle.innerHTML = "Swiss Map";
 
             isMenuOpen = false;
