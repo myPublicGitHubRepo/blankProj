@@ -48,7 +48,14 @@ var LayerModule = (function() {
     }
 
 
-
+    function setCustomLayer(layer) {
+        name = layer.serverLayerName;
+        ext = "." + layer.format;
+        time = layer.timestamps[0];
+        dimension = "21781";
+        _refreshLayers();
+        MenuModule.closeNav();
+    }
 
 
     function setDufour() {
@@ -88,7 +95,6 @@ var LayerModule = (function() {
 
     function toggleWanderwege() {
         //https: //wmts106.geo.admin.ch/1.0.0/ch.swisstopo.swisstlm3d-wanderwege/default/current/21781/
-        debugger;
         MenuModule.closeNav();
         if (wanderwege == null) {
             wanderwege = olStuff.addOverLayer({
@@ -137,7 +143,8 @@ var LayerModule = (function() {
         setSiegfried: setSiegfried,
         getPrefix: getPrefix,
         toggleWanderland: toggleWanderland,
-        toggleWanderwege: toggleWanderwege
+        toggleWanderwege: toggleWanderwege,
+        setCustomLayer: setCustomLayer
 
     }
 

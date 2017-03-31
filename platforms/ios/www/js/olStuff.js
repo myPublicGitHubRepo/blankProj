@@ -12,7 +12,7 @@ var olStuff = (function() {
     var accuracyFeature;
     var arrowFeature;
     var ovalFeature;
-
+    var vibrate = false;
     var xyzLayer = [];
 
     proj4.defs('EPSG:21781', '+proj=somerc +lat_0=46.95240555555556 ' +
@@ -513,15 +513,17 @@ var olStuff = (function() {
 
 
         if (Math.abs(heading.trueHeading - prevHeading) > 10) {
-
-            if (device.platform == "iOS") {
-                TapticEngine.impact({
-                    style: "medium" // light | medium | heavy
-                });
-            } else {
-                navigator.vibrate(20);
-                console.log("vib");
+            if (vibrate) {
+                if (device.platform == "iOS") {
+                    TapticEngine.impact({
+                        style: "medium" // light | medium | heavy
+                    });
+                } else {
+                    navigator.vibrate(20);
+                    console.log("vib");
+                }
             }
+
 
             //console.log(heading.trueHeading - prevHeading);
             var radiants = heading.trueHeading * (Math.PI / 180);
@@ -668,6 +670,9 @@ var olStuff = (function() {
         olMap.removeLayer(overlayer);
     }
 
+    function setVibrate(value) {
+        vibrate = value;
+    }
 
 
 
@@ -677,7 +682,8 @@ var olStuff = (function() {
         setArrowStyle: setArrowStyle,
         getXYZLayer: getXYZLayer,
         addOverLayer: addOverLayer,
-        removeOverLayer: removeOverLayer
+        removeOverLayer: removeOverLayer,
+        setVibrate: setVibrate
     }
 
 

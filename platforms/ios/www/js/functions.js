@@ -168,6 +168,16 @@ var isDraw = false;
 
 function drawOkBtnClick() {
     MenuModule.closeNav();
+    if (navigator.connection.type == Connection.NONE) {
+
+        navigator.notification.alert(
+            'You need an internet connection to dowload maps', // message
+            function() {}, // callback
+            'No internet', // title
+            'Ok' // buttonName
+        );
+        return;
+    }
     if (isDraw) {
         downloadDraw();
 
@@ -176,17 +186,11 @@ function drawOkBtnClick() {
         isDraw = true;
         document.getElementById("drawMenu").innerHTML = "Ok";
     }
+
 }
 
 function startDraw() {
     $("#cancelBtn").show(200);
-
-
-
-    if (navigator.connection.type == Connection.NONE) {
-        alert("no internet connection");
-        return;
-    }
 
     if (draw != null) { olMap.removeInteraction(draw); }
     var theStyle = [
@@ -259,14 +263,7 @@ function startDraw() {
 }
 
 function downloadDraw() {
-    if (navigator.connection.type == Connection.NONE) {
-        alert("no internet connection");
 
-
-        $('#myProgress').hide();
-        cancelDraw();
-        return;
-    }
 
     if (allFeatures.length == 0) {
         //done
@@ -274,7 +271,13 @@ function downloadDraw() {
         $('#myProgress').hide(200);
         cancelDraw();
 
-        alert("done");
+
+        navigator.notification.alert(
+            'All selected maps areas are downloaded', // message
+            function() {}, // callback
+            'No internet', // title
+            'Ok' // buttonName
+        );
         return;
     }
     var theStyle = [
@@ -331,4 +334,24 @@ function onOffline() {
     //var topBar = document.getElementById('topBar');
     //topBar.classList.remove("online");
     StatusBar.backgroundColorByHexString("#8B0000");
+}
+
+function searchLayer() {
+    var input = document.getElementById('myInput');
+    var filter = input.value.toUpperCase();
+    var filtered = [];
+
+    $.each(allLayers, function(i, layer) {
+        if (layer.label.toUpperCase().indexOf(filter) > -1) {
+            filtered.push(layer);
+        }
+    });
+
+    if (filtered.length < 10) {
+        console.log(filtered);
+    }
+
+    if (filtered.length == 1) {
+        LayerModule.setCustomLayer(filtered[0]);
+    }
 }

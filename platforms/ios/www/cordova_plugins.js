@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "id": "cordova-plugin-app-preferences.apppreferences",
+        "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+        "pluginId": "cordova-plugin-app-preferences",
+        "clobbers": [
+            "plugins.appPreferences"
+        ]
+    },
+    {
         "id": "cordova-plugin-device.device",
         "file": "plugins/cordova-plugin-device/www/device.js",
         "pluginId": "cordova-plugin-device",
@@ -30,6 +38,14 @@ module.exports = [
         "pluginId": "cordova-plugin-device-orientation",
         "clobbers": [
             "navigator.compass"
+        ]
+    },
+    {
+        "id": "cordova-plugin-dialogs.notification",
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "pluginId": "cordova-plugin-dialogs",
+        "merges": [
+            "navigator.notification"
         ]
     },
     {
@@ -279,11 +295,27 @@ module.exports = [
         ]
     },
     {
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "pluginId": "cordova-plugin-splashscreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
+    },
+    {
         "id": "cordova-plugin-statusbar.statusbar",
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
         "pluginId": "cordova-plugin-statusbar",
         "clobbers": [
             "window.StatusBar"
+        ]
+    },
+    {
+        "id": "cordova-plugin-taptic-engine.TapticEngine",
+        "file": "plugins/cordova-plugin-taptic-engine/www/TapticEngine.js",
+        "pluginId": "cordova-plugin-taptic-engine",
+        "clobbers": [
+            "TapticEngine"
         ]
     },
     {
@@ -302,59 +334,27 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
-    },
-    {
-        "id": "cordova-plugin-taptic-engine.TapticEngine",
-        "file": "plugins/cordova-plugin-taptic-engine/www/TapticEngine.js",
-        "pluginId": "cordova-plugin-taptic-engine",
-        "clobbers": [
-            "TapticEngine"
-        ]
-    },
-    {
-        "id": "cordova-plugin-app-preferences.apppreferences",
-        "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
-        "pluginId": "cordova-plugin-app-preferences",
-        "clobbers": [
-            "plugins.appPreferences"
-        ]
-    },
-    {
-        "id": "cordova-plugin-splashscreen.SplashScreen",
-        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-        "pluginId": "cordova-plugin-splashscreen",
-        "clobbers": [
-            "navigator.splashscreen"
-        ]
-    },
-    {
-        "id": "cordova-plugin-dialogs.notification",
-        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-        "pluginId": "cordova-plugin-dialogs",
-        "merges": [
-            "navigator.notification"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "cordova-plugin-app-preferences": "0.99.3",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-device": "1.1.5",
     "cordova-plugin-device-orientation": "1.0.6",
+    "cordova-plugin-dialogs": "1.3.2",
     "cordova-plugin-file": "4.3.1",
     "cordova-plugin-file-transfer": "1.6.2",
     "cordova-plugin-geolocation": "2.4.2",
     "cordova-plugin-http": "1.2.0",
     "cordova-plugin-network-information": "1.3.2",
+    "cordova-plugin-splashscreen": "4.0.2",
     "cordova-plugin-statusbar": "2.2.2",
+    "cordova-plugin-taptic-engine": "2.1.0",
     "cordova-plugin-vibration": "2.1.4",
     "cordova-plugin-whitelist": "1.3.1",
-    "cordova-sqlite-storage": "2.0.2",
-    "cordova-plugin-taptic-engine": "2.1.0",
-    "cordova-plugin-app-preferences": "0.99.3",
-    "cordova-plugin-splashscreen": "4.0.2",
-    "cordova-plugin-dialogs": "1.3.2"
+    "cordova-sqlite-storage": "2.0.2"
 };
 // BOTTOM OF METADATA
 });

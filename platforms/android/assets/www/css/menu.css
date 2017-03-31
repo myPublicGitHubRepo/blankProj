@@ -1,3 +1,36 @@
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+
+/* Rotate first bar */
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+
+/* Fade out the second bar */
+
+.change .bar2 {
+    opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-7px, -7px);
+}
+
 .sidenavBackground {
     height: 100%;
     width: 100%;
@@ -8,6 +41,11 @@
     opacity: 0.5;
     transition: 0.3s;
     right: 0;
+}
+
+.blur {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 }
 
 .sidenav {

@@ -162,7 +162,13 @@ var TileModule = (function() {
 
             window.resolveLocalFileSystemURL(fileName, function(dir) {
                 dir.removeRecursively(function(file) {
-                    alert("all files removed");
+
+                    navigator.notification.alert(
+                        'All files removed', // message
+                        function() {}, // callback
+                        'Delete layers', // title
+                        'Ok' // buttonName
+                    );
 
                     //reset firstLaunch
                     window.localStorage.setItem('firstLaunch', 0);

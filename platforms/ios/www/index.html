@@ -52,6 +52,8 @@
     <script src="js/geoAdminAPI/EPSG2056.js" type="text/javascript"></script>-->
 
     <script src="js/utils.js" type="text/javascript"></script>
+    <script src="js/layerConfig.js" type="text/javascript"></script>
+
 
 
     <script src="js/base64.js" type="text/javascript"></script>
@@ -96,7 +98,20 @@
 
         <p>Actions:</p>
         <a id="drawMenu" href="#">Draw</a>
+        <a id="innerBla" href="#">Open</a>
         <a id="prefMenu" href="#">Preferences</a>
+
+
+
+    </div>
+
+    <div id="mySidenav2" class="sidenav">
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="MenuModule.closeNav()">&times;</a>-->
+        <p>Layers:</p>
+        <a id="pixelFarbeMenu" href="#">Pixel Farbe</a>
+        <a id="swissimageMenu" href="#">Swissimage</a>
+        <a id="siegfriedMenu" href="#">Siegfried</a>
+        <a id="dufourMenu" href="#">Dufour</a>
 
 
     </div>
@@ -105,8 +120,9 @@
     <!-- https://www.tutorialspoint.com/cordova/cordova_file_system.htm -->
     <!--<button id="downloadBtn" disabled class="topComponents">Download</button>-->
     <div id="topBar">
-        <div id="topBarTitle" class="topComponents">Swiss Map</div>
-        <div id="menuContainer" class="topComponents" onclick="MenuModule.openNav()">
+        <div id="topBarTitle" class="topComponents">Swiss Map Light</div>
+        <!--<input type="text" id="myInput" onkeyup="searchLayer()" placeholder="Search for names..">-->
+        <div id="menuContainer" class="topComponents">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>

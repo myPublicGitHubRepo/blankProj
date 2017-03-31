@@ -1,7 +1,7 @@
 package me.apla.cordova;
 
 // this is not needed anymore
-// import com.elia.blankProj.R;
+// import com.kocher.blankProj.R;
 
 import android.app.Activity;
 import android.content.Context;

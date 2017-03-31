@@ -32,10 +32,10 @@
         "type": "toggle",
         "default": false,
         "key": "deleteLayer"
+    }, {
+        "title": "Vibrations",
+        "type": "toggle",
+        "default": false,
+        "key": "vibrations"
     }]
-
-
-
-
-
 }]

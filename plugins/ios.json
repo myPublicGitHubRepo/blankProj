@@ -7,56 +7,56 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-app-preferences": {
+            "PACKAGE_NAME": "com.kocher.blankProj"
+        },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
         },
         "cordova-plugin-device-orientation": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.kocher.blankProj"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
         },
         "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
         },
         "cordova-plugin-geolocation": {
             "GEOLOCATION_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
         },
         "cordova-plugin-http": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
         },
         "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.elia.blankProj"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.elia.blankProj"
-        },
-        "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "com.elia.blankProj"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.elia.blankProj"
-        },
-        "cordova-sqlite-storage": {
-            "PACKAGE_NAME": "com.elia.blankProj"
-        },
-        "cordova-plugin-taptic-engine": {
-            "PACKAGE_NAME": "com.elia.blankProj"
-        },
-        "cordova-plugin-app-preferences": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
         },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.kocher.blankProj"
+        },
+        "cordova-plugin-taptic-engine": {
+            "PACKAGE_NAME": "com.kocher.blankProj"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.kocher.blankProj"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.kocher.blankProj"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.kocher.blankProj"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.elia.blankProj"
+            "PACKAGE_NAME": "com.kocher.blankProj"
         }
     }
 }

@@ -27,6 +27,10 @@ var PreferenceModule = (function() {
 
     }
 
+    function _vibrationsPrefOk(value) {
+        olStuff.setVibrate(value);
+    }
+
 
     function _prefFail(error) {
         console.log("error getting preferences" + error);
@@ -41,6 +45,8 @@ var PreferenceModule = (function() {
         plugins.appPreferences.fetch(_arrowPrefOk, _prefFail, 'bigArrow');
         plugins.appPreferences.fetch(_newworkPrefOk, _prefFail, 'network');
         plugins.appPreferences.fetch(_deleteLayerPrefOk, _prefFail, 'deleteLayer');
+        plugins.appPreferences.fetch(_vibrationsPrefOk, _prefFail, 'vibrations');
+
 
     }
 
